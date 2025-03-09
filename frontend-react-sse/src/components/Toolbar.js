@@ -14,7 +14,7 @@ const Toolbar = () => {
 
   const sendMessage = async (e) => {
     e.preventDefault();
-    console.log(\`[Toolbar] Attempting to send message with toolbarId: \${toolbarId}, message: \${messageText}\`);
+    console.log(`[Toolbar] Attempting to send message with toolbarId: ${toolbarId}, message: ${messageText}`);
 
     if (!messageText.trim()) {
       console.warn("[Toolbar] Message text is empty.");

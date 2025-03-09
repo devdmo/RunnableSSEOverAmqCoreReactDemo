@@ -23,7 +23,7 @@ packages/
 
 # Visual Studio folders
 .vs/
-.vscode/
+#.vscode/
 
 # ASP.NET Core specific
 wwwroot/lib/

@@ -17,8 +17,8 @@ const InfoPage = () => {
       return;
     }
 
-    console.log(\`[InfoPage] Starting SSE connection for Info ID: \${infoId}\`);
-    const eventSource = new EventSource(\`http://localhost:5000/api/info/stream?id=\${infoId}\`);
+    console.log(`[InfoPage] Starting SSE connection for Info ID: ${infoId}`);
+    const eventSource = new EventSource(`http://localhost:5000/api/info/stream?id=${infoId}`);
 
     eventSource.onopen = () => {
       console.log("[InfoPage] SSE connection established.");
@@ -46,7 +46,7 @@ const InfoPage = () => {
     e.preventDefault();
     const id = e.target.elements.infoId.value.trim();
     if (id) {
-      console.log(\`[InfoPage] Info ID set to: \${id}\`);
+      console.log(`[InfoPage] Info ID set to: ${id}`);
       setInfoId(id);
     } else {
       console.warn("[InfoPage] Empty Info ID entered.");
