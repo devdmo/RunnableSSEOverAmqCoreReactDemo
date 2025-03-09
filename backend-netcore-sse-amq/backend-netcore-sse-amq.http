@@ -1,0 +1,6 @@
+@backend_netcore_sse_amq_HostAddress = http://localhost:5262
+
+GET {{backend_netcore_sse_amq_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

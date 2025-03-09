@@ -1,0 +1,246 @@
+Script started on 2025-03-09 10:28:27-06:00 [TERM="screen" TTY="/dev/pty2" COLUMNS="126" LINES="51"]
+[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ stty size
+[?2004l51 126
+[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ mkdir Backend
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ mkdir Frontend
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ cd Backend/
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Backend
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Backend[0m
+$ ls
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Backend
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Backend[0m
+$ dotnet new webapi --no-https -o .
+[?2004l[6n[6n[?9001h[?1004h[m[?25hThe template "ASP.NET Core Web API" was created successfully.[?25l[30;1HProcessing post-creation actions...
+Restoring C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\Backend\Backend.csproj:
+[?25h]9;4;3;\[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l  C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\Backend\Backend.csproj [21CRestore (0.0s)
+[?25h[?25l[32;114H(0.1s)
+[?25h[?25l[32;114H(0.1s)
+[?25h[?25l[32;114H(0.2s)
+[?25h[?25l[32;114H(0.2s)
+[?25h[?25l[32;114H(0.3s)
+[?25h[?25l[32;114H(0.3s)
+[?25h[?25l[32;114H(0.4s)
+[?25h[?25l[32;114H(0.4s)
+[?25h[?25l[32;114H(0.5s)
+[?25h[?25l[32;114H(0.5s)
+[?25h[?25l[32;114H(0.5s)
+[?25h[?25l[32;114H(0.6s)
+[?25h[?25l[32;114H(0.6s)
+[?25h[?25l[32;114H(0.7s)
+[?25h[?25l[32;114H(0.7s)
+[?25h[?25l[32;114H(0.8s)
+[?25h[?25l[32;114H(0.8s)
+[?25h[?25l[32;114H(0.9s)
+[?25h[?25l[32;114H(0.9s)
+[?25h[?25l[32;114H(1.0s)
+[?25h[?25l[32;114H(1.0s)
+[?25h[?25l[32;114H(1.1s)
+[?25h[?25l[32;114H(1.1s)
+[?25h[?25l[32;114H(1.1s)
+[?25h[?25l[32;114H(1.2s)
+[?25h[?25l[32;114H(1.2s)
+[?25h[?25l[32;114H(1.3s)
+[?25h[?25l[32;114H(1.3s)
+[?25h[?25l[32;114H(1.4s)
+[?25h[?25l[32;114H(1.4s)
+[?25h[?25l[32;114H(1.5s)
+[?25h[?25l[32;114H(1.5s)
+[?25h[?25l[32;114H(1.6s)
+[?25h[?25l[32;114H(1.6s)
+[?25h[?25l[32;114H(1.7s)
+[?25h[?25l[32;114H(1.7s)
+[?25h[?25l[32;114H(1.7s)
+[?25h[?25l[32;114H(1.8s)
+[?25h[?25l[32;114H(1.8s)
+[?25h[?25l[32;114H(1.9s)
+[?25h[?25l[32;114H(1.9s)
+[?25h[?25l[32;114H(2.0s)
+[?25h[?25l[32;114H(2.0s)
+[?25h[?25l[32;114H(2.1s)
+[?25h[?25l[32;114H(2.1s)
+[?25h[?25l[32;114H(2.2s)
+[?25h[?25l[32;114H(2.2s)
+[?25h[?25l[32;114H(2.2s)
+[?25h[?25l[32;114H(2.3s)
+[?25h[?25l[32;114H(2.3s)
+[?25h[?25l]9;4;0;\[32;1H[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[32;1H[?25h[?25lRestore succeeded.[35;1H[?25h[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Backend
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Backend[0m
+$ dotnet add package Apache.NMS.ActiveMQ
+[?2004l[6n[?9001h[?1004h[m[?25h]9;4;3;\[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l  Backend [66C_FilterRestoreGraphProjectInputItems (0.0s)
+[?25h[?25l[38;1H[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[38;1H[?25h[?25l[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[38;1H[?25h[?25l  Backend [76CProcessFrameworkReferences (0.0s)
+[?25h[?25l[38;114H(0.1s)
+[?25h[?25l[38;1H[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[38;1H[?25h[?25l  Backend [78CGenerateRestoreGraphFile (0.1s)
+[?25h[?25l[38;114H(0.1s)
+[?25h[?25l[38;1H[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[38;1H[?25h]9;4;0;\
+Build [32m[1msucceeded[m in 1.1s
+info : X.509 certificate chain validation will use the default trust store selected by .NET for code signing.
+info : X.509 certificate chain validation will use the default trust store selected by .NET for timestamping.
+info : Adding PackageReference for package 'Apache.NMS.ActiveMQ' into project 'C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\Backend\Backend.csproj'.
+info :   GET https://api.nuget.org/v3/registration5-gz-semver2/apache.nms.activemq/index.json
+info :   OK https://api.nuget.org/v3/registration5-gz-semver2/apache.nms.activemq/index.json 285ms
+info : Restoring packages for C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\Backend\Backend.csproj...
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.netcore.platforms/index.json
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.netcore.targets/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.netcore.platforms/index.json 107ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.netcore.targets/index.json 119ms
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.netcore.platforms/1.1.1/microsoft.netcore.platforms.1.1.1.nupkg[51;1H
+info :   GET https://api.nuget.org/v3-flatcontainer/microsoft.netcore.targets/1.1.3/microsoft.netcore.targets.1.1.3.nupkg     
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.netcore.platforms/1.1.1/microsoft.netcore.platforms.1.1.1.nupkg 1
+[50;126H16ms
+info :   OK https://api.nuget.org/v3-flatcontainer/microsoft.netcore.targets/1.1.3/microsoft.netcore.targets.1.1.3.nupkg 77ms[51;1H
+info : Installed Microsoft.NETCore.Platforms 1.1.1 from https://api.nuget.org/v3/index.json to C:\Users\wizar\.nuget\packages\
+[50;126H\microsoft.netcore.platforms\1.1.1 with content hash TMBuzAHpTenGbGgk0SMTwyEkyijY/Eae4ZGsFNYJvAr/LDn1ku3Etp3FPxChmDp5HHF3kzJuoa
+[50;126Haa08N0xjqAJfQ==.
+info : Installed Microsoft.NETCore.Targets 1.1.3 from https://api.nuget.org/v3/index.json to C:\Users\wizar\.nuget\packages\mi
+[50;126Hicrosoft.netcore.targets\1.1.3 with content hash 3Wrmi0kJDzClwAC+iBdUBpEKmEle8FQNsCs77fkiOIw/9oYA07bL1EZNX0kQ2OMN3xpwvl0vAtOCYY
+[50;126HY3ndDNlhQ==.
+info :   CACHE https://api.nuget.org/v3/vulnerabilities/index.json
+info :   CACHE https://api.nuget.org/v3-vulnerabilities/2025.03.07.17.36.10/vulnerability.base.json
+info :   CACHE https://api.nuget.org/v3-vulnerabilities/2025.03.07.17.36.10/2025.03.09.11.36.14/vulnerability.update.json
+info : Package 'Apache.NMS.ActiveMQ' is compatible with all the specified frameworks in project 'C:\Short\sevil\rinzler\acf\Ru
+[50;126HunnableSSEOverAmqCoreReactDemo\Backend\Backend.csproj'.
+info : PackageReference for package 'Apache.NMS.ActiveMQ' version '2.1.1' added to file 'C:\Short\sevil\rinzler\acf\RunnableSS
+[50;126HSEOverAmqCoreReactDemo\Backend\Backend.csproj'.
+info : Writing assets file to disk. Path: C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\Backend\obj\project.asset
+[50;126Hts.json
+log  : Restored C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\Backend\Backend.csproj (in 1.08 sec).
+[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Backend
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Backend[0m
+$ dotnet add package Newtonsoft.Json
+[?2004l[6n[?9001h[?1004h[m[?25h]9;4;3;\[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l  Backend [76CProcessFrameworkReferences (0.0s)
+[?25h[?25l[50;114H(0.1s)
+[?25h[?25l[50;1H  Backend                                                                                    _GetRestoreSettings (0.1s)       
+[?25h[?25l[50;1H[K
+[K[50;1H[?25h[?25l[K
+[K[50;1H[?25h[?25l  Backend [78CGenerateRestoreGraphFile (0.1s)
+[?25h[?25l[50;1H[K
+[K[50;1H[?25h
+Build [32m[1msucceeded[m in 1.0s]9;4;0;\
+info : X.509 certificate chain validation will use the default trust store selected by .NET for code signing.
+info : X.509 certificate chain validation will use the default trust store selected by .NET for timestamping.
+info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreRe
+[50;126HeactDemo\Backend\Backend.csproj'.
+info :   GET https://api.nuget.org/v3/registration5-gz-semver2/newtonsoft.json/index.json
+info :   OK https://api.nuget.org/v3/registration5-gz-semver2/newtonsoft.json/index.json 379ms
+info : Restoring packages for C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\Backend\Backend.csproj...
+info :   CACHE https://api.nuget.org/v3/vulnerabilities/index.json
+info :   CACHE https://api.nuget.org/v3-vulnerabilities/2025.03.07.17.36.10/vulnerability.base.json
+info :   CACHE https://api.nuget.org/v3-vulnerabilities/2025.03.07.17.36.10/2025.03.09.11.36.14/vulnerability.update.json
+info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks in project 'C:\Short\sevil\rinzler\acf\Runnab
+[50;126HbleSSEOverAmqCoreReactDemo\Backend\Backend.csproj'.
+info : PackageReference for package 'Newtonsoft.Json' version '13.0.3' added to file 'C:\Short\sevil\rinzler\acf\RunnableSSEOv
+[50;126HverAmqCoreReactDemo\Backend\Backend.csproj'.
+info : Writing assets file to disk. Path: C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\Backend\obj\project.asset
+[50;126Hts.json
+log  : Restored C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\Backend\Backend.csproj (in 289 ms).
+[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Backend
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Backend[0m
+$ cd ..
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ ls
+[?2004l20250309-102827-setup-process-cmd.out  20250309-102827-setup-process-cmd.time  Backend	Frontend
+[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ cd Frontend/
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend[0m
+$ ls
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend[0m
+$ npx create-react-app .
+[?2004lbash: npx: command not found
+[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend[0m
+$ #i will continue por[Kst instalation
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend[0m
+$ 
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend[0m
+$ 
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend[0m
+$ exit
+[?2004lexit
+
+Script done on 2025-03-09 10:30:45-06:00 [COMMAND_EXIT_CODE="127"]

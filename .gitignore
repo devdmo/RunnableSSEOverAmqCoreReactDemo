@@ -1,0 +1,67 @@
+# ==============================
+# Visual Studio / .NET Core Files
+# ==============================
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+**/bin/
+**/obj/
+**/out/
+TestResults/
+artifacts/
+
+# NuGet packages
+*.nupkg
+packages/
+.nuget/
+
+# Visual Studio folders
+.vs/
+.vscode/
+
+# ASP.NET Core specific
+wwwroot/lib/
+
+# Project lock file
+project.lock.json
+
+# ==============================
+# React / Node.js Files
+# (Assuming your React client is in a folder like ClientApp)
+# ==============================
+
+# Node modules
+ClientApp/node_modules/
+# If your React app lives in a different folder, update accordingly.
+
+# Build outputs
+ClientApp/build/
+ClientApp/dist/
+
+# Cache and logs
+ClientApp/.cache/
+ClientApp/npm-debug.log*
+ClientApp/yarn-debug.log*
+ClientApp/yarn-error.log*
+
+# Environment files
+ClientApp/.env
+ClientApp/.env.local
+ClientApp/.env.development.local
+ClientApp/.env.test.local
+ClientApp/.env.production.local
+
+# ==============================
+# Miscellaneous
+# ==============================
+
+# macOS and Windows system files
+.DS_Store
+Thumbs.db
+
