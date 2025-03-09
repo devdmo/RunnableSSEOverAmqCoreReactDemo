@@ -1,8 +1,6 @@
-### Test Toolbar Message
-POST http://localhost:5000/api/toolbar/send
-Content-Type: application/json
+@backend_netcore_sse_amq_HostAddress = http://localhost:5262
 
-{
-  "id": "test",
-  "text": "Hello from Toolbar!"
-}
+GET {{backend_netcore_sse_amq_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

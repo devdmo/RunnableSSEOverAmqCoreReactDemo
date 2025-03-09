@@ -1,0 +1,3252 @@
+diff --git a/20250309-103408-setup-process-p2.out b/20250309-103408-setup-process-p2.out
+index e69de29..7cade55 100644
+--- a/20250309-103408-setup-process-p2.out
++++ b/20250309-103408-setup-process-p2.out
+@@ -0,0 +1,414 @@
++Script started on 2025-03-09 10:34:08-06:00 [TERM="xterm" TTY="/dev/pty1" COLUMNS="132" LINES="45"]
++[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ 
++[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ 
++[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ 
++[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ ls
++[?2004l20250309-102827-setup-process-cmd.out	20250309-103408-setup-process-p2.out   Backend
++20250309-102827-setup-process-cmd.time	20250309-103408-setup-process-p2.time  Frontend
++[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ cd [K[K[Kcd Frontend/
++[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend[0m
++$ ls
++[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend[0m
++$  [7mnpx create-react-app .[27m[C[C[Cnpx create-react-app .
++[?2004l[6n[6n[?9001h[?1004h[m[?25h[?9001l[?1004l[6n[?9001h[?1004h[m[?25h[?9001l[?1004l[6n[?9001h[?1004h[m[?25h]0;npm]0;npm exec create-react-app .⠙[K⠹[K⠸[K⠼[K⠴[KNeed to install the following packages:[K
++create-react-app@5.1.0
++Ok to proceed? (y)[1Cy
++
++⠙⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K[1mnpm[22m [33mwarn [94mdeprecated [minflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a
++[44;132Ha good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
++⠸[1mnpm[22m [33mwarn [94mdeprecated [mfstream-ignore@1.0.5: This package is no longer supported.[K
++[1mnpm[22m [33mwarn [94mdeprecated [mrimraf@2.7.1: Rimraf versions prior to v4 are no longer supported[K
++[1mnpm[22m [33mwarn [94mdeprecated [muid-number@0.0.6: This package is no longer supported.[K
++⠼[1mnpm[22m [33mwarn [94mdeprecated [mglob@7.2.3: Glob versions prior to v9 are no longer supported[K
++⠼⠴[K[1mnpm[22m [33mwarn [94mdeprecated [mfstream@1.0.12: This package is no longer supported.[K
++⠴⠦[K⠧[K[1mnpm[22m [33mwarn [94mdeprecated [mtar@2.2.2: This version of tar is no longer supported, and will not receive security updates. Please upgrade asa
++[44;132Hap.
++⠧[K]0;C:\Windows\system32\cmd.exe [33m[1mcreate-react-app is deprecated.[m
++
++You can find a list of up-to-date React frameworks on react.dev
++For more info see:[4mhttps://react.dev/link/cra[24m[K
++
++[90mThis error message will only be shown once per install.[m
++[31mCannot create a project named [32m"Frontend" [31mbecause of npm naming restrictions:[m
++
++[31m  * name can no longer contain capital letters[m
++
++[31mPlease choose a different project name.[m
++[K[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend[0m
++$ #capitals are not permitted
++[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend[0m
++$ cd ..
++[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ ls
++[?2004l20250309-102827-setup-process-cmd.out	20250309-103408-setup-process-p2.out   Backend
++20250309-102827-setup-process-cmd.time	20250309-103408-setup-process-p2.time  Frontend
++[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ rm -rf Backend/
++[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ rm -rf Frontend/
++[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ stty size
++[?2004l45 132
++[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ [7mmkdir backend-netcore-sse-amq[27m[C[Cmkdir backend-netcore-sse-amq
++[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ mkdir [7mmkdir frontend-react-sse[27m[C[C[C[C[C[C[C[Cmkdir frontend-react-sse
++[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ ls
++[?2004l20250309-102827-setup-process-cmd.out	20250309-103408-setup-process-p2.out   backend-netcore-sse-amq	mkdir
++20250309-102827-setup-process-cmd.time	20250309-103408-setup-process-p2.time  frontend-react-sse
++[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ rmdir mkdir/
++[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ cd v[Kbackend-netcore-sse-amq/
++[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/backend-netcore-sse-amq
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/backend-netcore-sse-amq[0m
++$ ls
++[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/backend-netcore-sse-amq
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/backend-netcore-sse-amq[0m
++$ [7mdotnet new webapi --no-https -o .[27m[C[Cdotnet new webapi --no-https -o .
++[?2004l[6n[?9001h[?1004h[m[?25hThe template "ASP.NET Core Web API" was created successfully.
++
++Processing post-creation actions...
++Restoring C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\backend-netcore-sse-amq\backend-netcore-sse-amq.csproj:        
++]9;4;3;\[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l  csproj [103C (0.0s)
++[?25h[?25l[44;114H(0.1s)
++[?25h[?25l[44;114H(0.2s)
++[?25h[?25l[44;114H(0.2s)
++[?25h[?25l[44;114H(0.3s)
++[?25h[?25l[44;114H(0.3s)
++[?25h[?25l[44;114H(0.3s)
++[?25h[?25l[44;114H(0.4s)
++[?25h[?25l[44;114H(0.4s)
++[?25h[?25l[44;114H(0.5s)
++[?25h[?25l[44;114H(0.5s)
++[?25h[?25l[44;114H(0.6s)
++[?25h[?25l[44;114H(0.6s)
++[?25h[?25l[44;114H(0.7s)
++[?25h[?25l[44;114H(0.7s)
++[?25h[?25l[44;114H(0.8s)
++[?25h[?25l[44;114H(0.8s)
++[?25h[?25l[44;114H(0.9s)
++[?25h[?25l[44;1H[?25h]9;4;0;\Restore succeeded.[K
++[K
++
++[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/backend-netcore-sse-amq
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/backend-netcore-sse-amq[0m
++$ [?9001l[?1004l[7mdotnet add package Apache.NMS.ActiveMQ[27m[C[Cdotnet add package Apache.NMS.ActiveMQ
++[?2004l[6n[?9001h[?1004h[m[?25h]9;4;3;\[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l  backend-netcore-sse-amq [58C_LoadRestoreGraphEntryPoints (0.0s)
++[?25h[?25l[44;1H[K
++[K[44;1H[?25h[?25l[?25h[?25l  backend-netcore-sse-amq [60CProcessFrameworkReferences (0.0s)
++[?25h[?25l[44;114H(0.1s)
++[?25h[?25l[44;1H  backend-netcore-sse-amq                                                               CollectPackageReferences (0.1s)[K
++[?25h[?25l[44;1H[K
++[K[44;1H[?25h[?25l[K
++[K[44;1H[?25h[?25l  backend-netcore-sse-amq [62CGenerateRestoreGraphFile (0.1s)
++[?25h[?25l[44;114H(0.1s)
++[?25h[?25l[44;1H[K
++Build [32m[1msucceeded[m in 1.1s[K[?25h]9;4;0;\
++info : X.509 certificate chain validation will use the default trust store selected by .NET for code signing.
++info : X.509 certificate chain validation will use the default trust store selected by .NET for timestamping.
++info : Adding PackageReference for package 'Apache.NMS.ActiveMQ' into project 'C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReac
++[44;132HctDemo\backend-netcore-sse-amq\backend-netcore-sse-amq.csproj'.
++info :   GET https://api.nuget.org/v3/registration5-gz-semver2/apache.nms.activemq/index.json
++info :   OK https://api.nuget.org/v3/registration5-gz-semver2/apache.nms.activemq/index.json 79ms
++info : Restoring packages for C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\backend-netcore-sse-amq\backend-netcore-sse
++[44;132He-amq.csproj...
++info :   GET https://api.nuget.org/v3/vulnerabilities/index.json
++info :   OK https://api.nuget.org/v3/vulnerabilities/index.json 123ms
++info :   GET https://api.nuget.org/v3-vulnerabilities/2025.03.07.17.36.10/vulnerability.base.json
++info :   GET https://api.nuget.org/v3-vulnerabilities/2025.03.07.17.36.10/2025.03.09.17.36.15/vulnerability.update.json
++info :   OK https://api.nuget.org/v3-vulnerabilities/2025.03.07.17.36.10/vulnerability.base.json 72ms
++info :   OK https://api.nuget.org/v3-vulnerabilities/2025.03.07.17.36.10/2025.03.09.17.36.15/vulnerability.update.json 133ms
++info : Package 'Apache.NMS.ActiveMQ' is compatible with all the specified frameworks in project 'C:\Short\sevil\rinzler\acf\Runnable
++[44;132HeSSEOverAmqCoreReactDemo\backend-netcore-sse-amq\backend-netcore-sse-amq.csproj'.
++info : PackageReference for package 'Apache.NMS.ActiveMQ' version '2.1.1' added to file 'C:\Short\sevil\rinzler\acf\RunnableSSEOverA
++[44;132HAmqCoreReactDemo\backend-netcore-sse-amq\backend-netcore-sse-amq.csproj'.
++info : Writing assets file to disk. Path: C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\backend-netcore-sse-amq\obj\pro
++[44;132Hoject.assets.json
++log  : Restored C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\backend-netcore-sse-amq\backend-netcore-sse-amq.csproj (i
++[44;132Hin 527 ms).
++[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/backend-netcore-sse-amq
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/backend-netcore-sse-amq[0m
++$ [7mdotnet add package Newtonsoft.Json[27m[C[Cdotnet add package Newtonsoft.Json
++[?2004l[6n[?9001h[?1004h[m[?25h]9;4;3;\[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l  backend-netcore-sse-amq [50C_FilterRestoreGraphProjectInputItems (0.0s)
++[?25h[?25l[44;1H[K
++[K[44;1H[?25h[?25l[?25h[?25l  backend-netcore-sse-amq [60CProcessFrameworkReferences (0.0s)
++[?25h[?25l[44;114H(0.1s)
++[?25h[?25l[44;1H  backend-netcore-sse-amq                                                                    _GetRestoreSettings (0.1s)[K
++[?25h[?25l[44;1H[K
++[K[44;1H[?25h[?25l  backend-netcore-sse-amq [62CGenerateRestoreGraphFile (0.1s)
++[?25h[?25l[44;114H(0.1s)
++[?25h[?25l[44;1H[K
++Build [32m[1msucceeded[m in 1.1s[K[?25h]9;4;0;\
++info : X.509 certificate chain validation will use the default trust store selected by .NET for code signing.
++info : X.509 certificate chain validation will use the default trust store selected by .NET for timestamping.
++info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDem
++[44;132Hmo\backend-netcore-sse-amq\backend-netcore-sse-amq.csproj'.
++info :   GET https://api.nuget.org/v3/registration5-gz-semver2/newtonsoft.json/index.json
++info :   OK https://api.nuget.org/v3/registration5-gz-semver2/newtonsoft.json/index.json 363ms
++info : Restoring packages for C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\backend-netcore-sse-amq\backend-netcore-sse
++[44;132He-amq.csproj...
++info :   CACHE https://api.nuget.org/v3/vulnerabilities/index.json
++info :   CACHE https://api.nuget.org/v3-vulnerabilities/2025.03.07.17.36.10/vulnerability.base.json
++info :   CACHE https://api.nuget.org/v3-vulnerabilities/2025.03.07.17.36.10/2025.03.09.17.36.15/vulnerability.update.json
++info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks in project 'C:\Short\sevil\rinzler\acf\RunnableSSEO
++[44;132HOverAmqCoreReactDemo\backend-netcore-sse-amq\backend-netcore-sse-amq.csproj'.
++info : PackageReference for package 'Newtonsoft.Json' version '13.0.3' added to file 'C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqC
++[44;132HCoreReactDemo\backend-netcore-sse-amq\backend-netcore-sse-amq.csproj'.
++info : Writing assets file to disk. Path: C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\backend-netcore-sse-amq\obj\pro
++[44;132Hoject.assets.json
++log  : Restored C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\backend-netcore-sse-amq\backend-netcore-sse-amq.csproj (i
++[44;132Hin 286 ms).
++[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/backend-netcore-sse-amq
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/backend-netcore-sse-amq[0m
++$ cd ..
++[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ ls
++[?2004l20250309-102827-setup-process-cmd.out	20250309-103408-setup-process-p2.out   backend-netcore-sse-amq
++20250309-102827-setup-process-cmd.time	20250309-103408-setup-process-p2.time  frontend-react-sse
++[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ cd frontend-react-sse/
++[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/frontend-react-sse
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/frontend-react-sse[0m
++$ [7mnpx create-react-app .[27m[C[Cnpx create-react-app .
++[?2004l[6n[?9001h[?1004h[m[?25h[?9001l[?1004l[6n[?9001h[?1004h[m[?25h[?9001l[?1004l[6n[?9001h[?1004h[m[?25h]0;npm]0;npm exec create-react-app .⠙[K⠹[K⠸[K⠼[K⠴[KNeed to install the following packages:[K
++create-react-app@5.1.0
++Ok to proceed? (y)[1Cy
++
++⠙⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K[K]0;C:\Windows\system32\cmd.exe 
++Creating a new React app in [32mC:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\frontend-react-sse[m.
++
++]0;npm]0;npm config list]0;npmInstalling packages. This might take a couple of minutes.
++Installing [36mreact[m, [36mreact-dom[m, and [36mreact-scripts [mwith [36mcra-template[m...
++
++]0;npm install react react-dom react-scripts cra-template⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K[K⠼⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K[K
++added 1325 packages in 60s
++⠼[K
++268 packages are looking for funding
++  run `npm fund` for details
++
++Installing template dependencies using npm...
++]0;npm]0;npm install @testing-library/dom@^10.4.0 @testing-library/jest-dom@^6.6.3 @testing-library/react@^16.1.0 @testing-library/user-event@^13.2.1 web-vitals@^2.1.0⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K[K
++added 18 packages, and changed 1 package in 6s
++
++268 packages are looking for funding
++  run `npm fund` for details
++⠦[KRemoving template package using npm...
++
++]0;npm]0;npm uninstall cra-template⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K[K
++removed 1 package, and audited 1343 packages in 4s
++
++268 packages are looking for funding
++  run `npm fund` for details
++⠹[K
++[31m[1m12[m vulnerabilities (6 [33m[1mmoderate[m, 6 [31m[1mhigh[m)[K
++
++To address all issues (including breaking changes), run:
++  npm audit fix --force
++
++Run `npm audit` for details.
++
++Success! Created frontend-react-sse at C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\frontend-react-sse
++Inside that directory, you can run several commands:
++
++[36m  npm start[m
++    Starts the development server.
++
++[36m  npm run build[m
++    Bundles the app into static files for production.
++
++[36m  npm test[m
++    Starts the test runner.
++
++[36m  npm run eject[m
++    Removes this tool and copies build dependencies, configuration files
++    and scripts into the app directory. If you do this, you can’t go back!
++
++We suggest that you begin by typing:
++
++[36m  cd [mC:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\frontend-react-sse[K
++  [36mnpm start[K[m
++
++Happy hacking!
++[K[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/frontend-react-sse
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/frontend-react-sse[0m
++$ npx create-react-app .[C[C[K[7mnpm install axios react-router-dom[27m[C[Cnpm install axios react-router-dom
++[?2004l[6n[?9001h[?1004h[m[?25h[?9001l[?1004l[6n[?9001h[?1004h[m[?25h[?9001l[?1004l[6n[?9001h[?1004h[m[?25h]0;npm]0;npm install axios react-router-dom⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K[K
++added 9 packages, and audited 1352 packages in 5s
++
++268 packages are looking for funding
++  run `npm fund` for details
++⠇[K
++[31m[1m12[m vulnerabilities (6 [33m[1mmoderate[m, 6 [31m[1mhigh[m)[K
++
++To address all issues (including breaking changes), run:
++  npm audit fix --force
++
++Run `npm audit` for details.
++[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/frontend-react-sse
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/frontend-react-sse[0m
++$ cd ..
++[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ git status
++[?2004l[6n[?9001h[?1004h[m[?25hOn branch main
++
++No commits yet
++
++Untracked files:
++  (use "git add <file>..." to include in what will be committed)
++        [31m.gitignore[K[m
++        [31m20250309-102827-setup-process-cmd.out[K[m
++        [31m20250309-102827-setup-process-cmd.time[K[m
++        [31m20250309-103408-setup-process-p2.out[K[m
++        [31m20250309-103408-setup-process-p2.time[K[m
++        [31mbackend-netcore-sse-amq/[K[m
++        [31mfrontend-react-sse/[K[m
++
++nothing added to commit but untracked files present (use "git add" to track)
++[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ git add .
++[?2004l[6n[?9001h[?1004h[m[?25hwarning: in the working copy of 'backend-netcore-sse-amq/Program.cs', CRLF will be replaced by LF the next time Git touches it
++warning: in the working copy of 'backend-netcore-sse-amq/Properties/launchSettings.json', CRLF will be replaced by LF the next time 
++[44;132H Git touches it
++warning: in the working copy of 'backend-netcore-sse-amq/appsettings.Development.json', CRLF will be replaced by LF the next time Gi
++[44;132Hit touches it
++warning: in the working copy of 'backend-netcore-sse-amq/appsettings.json', CRLF will be replaced by LF the next time Git touches it[45;132H
++warning: in the working copy of 'backend-netcore-sse-amq/backend-netcore-sse-amq.csproj', CRLF will be replaced by LF the next time 
++[44;132H Git touches it
++warning: in the working copy of 'backend-netcore-sse-amq/backend-netcore-sse-amq.http', CRLF will be replaced by LF the next time Gi
++[44;132Hit touches it
++[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ git status
++[?2004l[6n[?9001h[?1004h[m[?25hOn branch main
++
++No commits yet
++
++Changes to be committed:
++  (use "git rm --cached <file>..." to unstage)
++        [32mnew file:   .gitignore[K[m
++        [32mnew file:   20250309-102827-setup-process-cmd.out[K[m
++        [32mnew file:   20250309-102827-setup-process-cmd.time[K[m
++        [32mnew file:   20250309-103408-setup-process-p2.out[K[m
++        [32mnew file:   20250309-103408-setup-process-p2.time[K[m
++        [32mnew file:   backend-netcore-sse-amq/Program.cs[K[m
++        [32mnew file:   backend-netcore-sse-amq/Properties/launchSettings.json[K[m
++        [32mnew file:   backend-netcore-sse-amq/appsettings.Development.json[K[m
++        [32mnew file:   backend-netcore-sse-amq/appsettings.json[K[m
++        [32mnew file:   backend-netcore-sse-amq/backend-netcore-sse-amq.csproj[K[m
++        [32mnew file:   backend-netcore-sse-amq/backend-netcore-sse-amq.http[K[m
++        [32mnew file:   frontend-react-sse/.gitignore[K[m
++        [32mnew file:   frontend-react-sse/README.md[K[m
++        [32mnew file:   frontend-react-sse/package-lock.json[K[m
++        [32mnew file:   frontend-react-sse/package.json[K[m
++        [32mnew file:   frontend-react-sse/public/favicon.ico[K[m
++        [32mnew file:   frontend-react-sse/public/index.html[K[m
++        [32mnew file:   frontend-react-sse/public/logo192.png[K[m
++        [32mnew file:   frontend-react-sse/public/logo512.png[K[m
++        [32mnew file:   frontend-react-sse/public/manifest.json[K[m
++        [32mnew file:   frontend-react-sse/public/robots.txt[K[m
++        [32mnew file:   frontend-react-sse/src/App.css[K[m
++        [32mnew file:   frontend-react-sse/src/App.js[K[m
++        [32mnew file:   frontend-react-sse/src/App.test.js[K[m
++        [32mnew file:   frontend-react-sse/src/index.css[K[m
++        [32mnew file:   frontend-react-sse/src/index.js[K[m
++        [32mnew file:   frontend-react-sse/src/logo.svg[K[m
++        [32mnew file:   frontend-react-sse/src/reportWebVitals.js[K[m
++        [32mnew file:   frontend-react-sse/src/setupTests.js[K[m
++
++[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ git commit -a -m "initial files"
++[?2004l[6n[?9001h[?1004h[m[?25h[main (root-commit) 68995cb] initial files
++ 29 files changed, 18659 insertions(+)
++ create mode 100644 .gitignore
++ create mode 100644 20250309-102827-setup-process-cmd.out
++ create mode 100644 20250309-102827-setup-process-cmd.time
++ create mode 100644 20250309-103408-setup-process-p2.out
++ create mode 100644 20250309-103408-setup-process-p2.time
++ create mode 100644 backend-netcore-sse-amq/Program.cs
++ create mode 100644 backend-netcore-sse-amq/Properties/launchSettings.json
++ create mode 100644 backend-netcore-sse-amq/appsettings.Development.json
++ create mode 100644 backend-netcore-sse-amq/appsettings.json
++ create mode 100644 backend-netcore-sse-amq/backend-netcore-sse-amq.csproj
++ create mode 100644 backend-netcore-sse-amq/backend-netcore-sse-amq.http
++ create mode 100644 frontend-react-sse/.gitignore
++ create mode 100644 frontend-react-sse/README.md
++ create mode 100644 frontend-react-sse/package-lock.json
++ create mode 100644 frontend-react-sse/package.json
++ create mode 100644 frontend-react-sse/public/favicon.ico
++ create mode 100644 frontend-react-sse/public/index.html
++ create mode 100644 frontend-react-sse/public/logo192.png
++ create mode 100644 frontend-react-sse/public/logo512.png
++ create mode 100644 frontend-react-sse/public/manifest.json
++ create mode 100644 frontend-react-sse/public/robots.txt
++ create mode 100644 frontend-react-sse/src/App.css
++ create mode 100644 frontend-react-sse/src/App.js
++ create mode 100644 frontend-react-sse/src/App.test.js
++ create mode 100644 frontend-react-sse/src/index.css
++ create mode 100644 frontend-react-sse/src/index.js
++ create mode 100644 frontend-react-sse/src/logo.svg
++ create mode 100644 frontend-react-sse/src/reportWebVitals.js
++ create mode 100644 frontend-react-sse/src/setupTests.js
++[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ git push
++[?2004l[6n[?9001h[?1004h[m[?25hEnumerating objects: 35, done.
++Counting objects: 100% (35/35), done.
++Delta compression using up to 24 threads
++Compressing objects:  51% (17/33)Compressing objects: 100% (33/33), done.
++Writing objects:  37% (13/35)Writing objects:  48% (17/35)Writing objects:  60% (21/35)Writing objects: 100% (35/35), 181.87 KiB | 3.87 MiB/s, done.
++Total 35 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
++remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1), done.[K
++To https://github.com/devdmo/RunnableSSEOverAmqCoreReactDemo
++ * [new branch]      main -> main
++[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ vim generate-project.sh
++[?2004lTaglist: Exuberant ctags (http://ctags.sf.net) not found in PATH. Plugin is not loaded.[?25l[J
++Press ENTER or type command to continue[?25h[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;45r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[45;1H"generate-project.sh" [New][2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[2;1H[1m[34m~                                                                                                                                   [3;1H~                                                                                                                                   [4;1H~                                                                                                                                   [5;1H~                                                                                                                                   [6;1H~                                                                                                                                   [7;1H~                                                                                                                                   [8;1H~                                                                                                                                   [9;1H~                                                                                                                                   [10;1H~                                                                                                                                   [11;1H~                                                                                                                                   [12;1H~                                                                                                                                   [13;1H~                                                                                                                                   [14;1H~                                                                                                                                   [15;1H~                                                                                                                                   [16;1H~                                                                                                                                   [17;1H~                                                                                                                                   [18;1H~                                                                                                                                   [19;1H~                                                                                                                                   [20;1H~                                                                                                                                   [21;1H~                                                                                                                                   [22;1H~                                                                                                                                   [23;1H~                                                                                                                                   [24;1H~                                                                                                                                   [25;1H~                                                                                                                                   [26;1H~                                                                                                                                   [27;1H~                                                                                                                                   [28;1H~                                                                                                                                   [29;1H~                                                                                                                                   [30;1H~                                                                                                                                   [31;1H~                                                                                                                                   [32;1H~                                                                                                                                   [33;1H~                                                                                                                                   [34;1H~                                                                                                                                   [35;1H~                                                                                                                                   [36;1H~                                                                                                                                   [37;1H~                                                                                                                                   [38;1H~                                                                                                                                   [39;1H~                                                                                                                                   [40;1H~                                                                                                                                   [41;1H~                                                                                                                                   [42;1H~                                                                                                                                   [43;1H~                                                                                                                                   [44;1H~                                                                                                                                   [m[45;115H0,0-1[9CAll[1;1H[?25h[?4m[?12$p[27m[23m[29m[m[H[2J[?25l[2;1H[1m[34m~                                                                                                                                   [3;1H~                                                                                                                                   [4;1H~                                                                                                                                   [5;1H~                                                                                                                                   [6;1H~                                                                                                                                   [7;1H~                                                                                                                                   [8;1H~                                                                                                                                   [9;1H~                                                                                                                                   [10;1H~                                                                                                                                   [11;1H~                                                                                                                                   [12;1H~                                                                                                                                   [13;1H~                                                                                                                                   [14;1H~                                                                                                                                   [15;1H~                                                                                                                                   [16;1H~                                                                                                                                   [17;1H~                                                                                                                                   [18;1H~                                                                                                                                   [19;1H~                                                                                                                                   [20;1H~                                                                                                                                   [21;1H~                                                                                                                                   [22;1H~                                                                                                                                   [23;1H~                                                                                                                                   [24;1H~                                                                                                                                   [25;1H~                                                                                                                                   [26;1H~                                                                                                                                   [27;1H~                                                                                                                                   [28;1H~                                                                                                                                   [29;1H~                                                                                                                                   [30;1H~                                                                                                                                   [31;1H~                                                                                                                                   [32;1H~                                                                                                                                   [33;1H~                                                                                                                                   [34;1H~                                                                                                                                   [35;1H~                                                                                                                                   [36;1H~                                                                                                                                   [37;1H~                                                                                                                                   [38;1H~                                                                                                                                   [39;1H~                                                                                                                                   [40;1H~                                                                                                                                   [41;1H~                                                                                                                                   [42;1H~                                                                                                                                   [43;1H~                                                                                                                                   [44;1H~                                                                                                                                   [m[45;115H0,0-1[9CAll"generate-project.sh" [New][1;1H[?25h[?25l[45;1H[K[45;1H:[?25hq![?25l[?2004l[>4;m[23;2t[23;1t[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m
++[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ 
++[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ 
++[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ ls
++[?2004l20250309-102827-setup-process-cmd.out	20250309-103408-setup-process-p2.out   backend-netcore-sse-amq
++20250309-102827-setup-process-cmd.time	20250309-103408-setup-process-p2.time  frontend-react-sse
++[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
++[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
++$ exit
++[?2004lexit
++
++Script done on 2025-03-09 12:01:29-06:00 [COMMAND_EXIT_CODE="0"]
+diff --git a/20250309-103408-setup-process-p2.time b/20250309-103408-setup-process-p2.time
+index e69de29..c21aa9c 100644
+--- a/20250309-103408-setup-process-p2.time
++++ b/20250309-103408-setup-process-p2.time
+@@ -0,0 +1,1782 @@
++0.062353 164
++0.630977 175
++0.181902 175
++0.189041 175
++0.188436 1
++0.110787 1
++0.093304 11
++0.031236 256
++0.000339 82
++0.202486 1
++0.185597 1
++0.092849 1
++0.309795 4
++0.159751 4
++0.171720 4
++0.172904 1
++0.093688 1
++0.184834 1
++0.061413 1
++0.233422 1
++0.173087 1
++0.125039 1
++0.092439 1
++0.289979 5
++0.563188 193
++0.141817 1
++0.104197 1
++0.077435 11
++0.029786 182
++0.109527 1
++7.011928 31
++4.704657 43
++0.353309 4
++0.093335 4
++0.032171 25
++0.104987 16
++0.047370 4
++0.018566 25
++0.182364 16
++0.046307 4
++0.031212 16
++0.000172 9
++0.137911 8
++0.104240 32
++0.578550 6
++0.080584 7
++0.094473 7
++0.088586 7
++0.073655 1
++0.031615 6
++0.015749 91
++3.553105 1
++0.940761 6
++0.091101 7
++0.078585 1
++0.031193 6
++0.058525 1
++0.029929 6
++0.047230 1
++0.030565 6
++0.062417 7
++0.075258 7
++0.075624 1
++0.031122 6
++0.060565 7
++0.075298 7
++0.093762 7
++0.093492 7
++0.072282 7
++0.076882 1
++0.015857 6
++0.076646 7
++0.078189 7
++0.091439 7
++0.074344 1
++0.034252 6
++0.042133 1
++0.031511 6
++0.077344 7
++0.085035 1
++0.030483 6
++0.061437 7
++0.091040 7
++0.031076 256
++0.000427 26
++0.031355 105
++0.013266 217
++0.031276 112
++0.074109 1
++0.031873 6
++0.015252 99
++0.030661 4
++0.059402 7
++0.078097 7
++0.032047 170
++0.031147 4
++0.043771 4
++0.077407 33
++0.341715 235
++0.297750 199
++0.030012 7
++0.062287 198
++119.548030 1
++0.699782 1
++0.062486 1
++0.105052 1
++0.062235 1
++0.106556 1
++0.107879 1
++0.306454 1
++0.353338 1
++0.093615 1
++0.138676 1
++0.078056 1
++0.078380 1
++0.074716 1
++0.126467 1
++0.058807 1
++0.082310 1
++0.156009 1
++0.276508 1
++0.062727 1
++0.078381 1
++0.110685 1
++0.336697 1
++0.109579 1
++0.153509 1
++0.061059 1
++0.170212 1
++0.127400 193
++0.309173 1
++0.166480 1
++0.062996 1
++0.076276 1
++0.153536 1
++0.309942 175
++0.123140 1
++0.092601 1
++0.090668 11
++0.031779 174
++0.015024 164
++0.556168 1
++0.091081 1
++0.062363 1
++0.164139 1
++0.057855 1
++0.169222 1
++0.077286 1
++0.247184 1
++0.140571 1
++0.202297 6
++0.569443 11
++0.109164 164
++0.521574 1
++0.093848 1
++0.080519 1
++0.124843 1
++0.060681 1
++0.167979 1
++0.094764 1
++0.804789 1
++0.172418 1
++0.095291 1
++0.089582 1
++0.078455 5
++1.112225 11
++0.030633 164
++2.846575 1
++0.092268 1
++0.151444 1
++0.125919 1
++0.212079 1
++0.129700 1
++0.086391 1
++0.111077 1
++0.122798 1
++0.075329 11
++0.031519 172
++20.851193 38
++0.815991 47
++0.031376 164
++1.029927 1
++0.153408 1
++0.095062 1
++0.094951 1
++0.140616 1
++0.089368 1
++13.211662 33
++0.648569 60
++0.030900 164
++1.435794 1
++0.087447 1
++0.120150 11
++0.030381 256
++0.000289 114
++1.220052 1
++0.062563 1
++0.250227 1
++0.124161 1
++0.138652 2
++0.314074 1
++0.171303 1
++0.123108 4
++0.454008 11
++0.031247 164
++0.205186 1
++0.169662 1
++0.094929 1
++0.340099 1
++0.345203 4
++0.122910 1
++0.045748 1
++0.185370 22
++0.467797 223
++0.149309 1
++0.077388 1
++0.077166 11
++0.032400 212
++11.917966 42
++0.763588 51
++0.046609 4
++0.031655 16
++0.000199 9
++0.888309 235
++0.080692 10
++0.042437 12
++0.045770 12
++0.048492 12
++0.045681 12
++0.046692 12
++0.044658 6
++0.031056 6
++0.000309 6
++0.033681 6
++0.015309 12
++0.062368 12
++0.046150 12
++0.047643 12
++0.047440 12
++0.045998 36
++0.089764 29
++0.048587 29
++0.045207 29
++0.046936 29
++0.046650 29
++0.045855 29
++0.046963 29
++0.046502 29
++0.044425 29
++0.045799 29
++0.047094 29
++0.046751 29
++0.047020 29
++0.047117 6
++0.000276 23
++0.046439 29
++0.046039 29
++0.046672 29
++0.031121 57
++0.062174 228
++1999.855483 47
++1.014748 56
++0.047615 4
++0.031752 25
++0.337140 10
++0.045518 12
++0.046470 12
++0.046847 12
++0.045789 12
++0.045210 12
++0.046961 12
++0.047593 12
++0.046721 12
++0.058149 12
++0.039635 12
++0.043391 12
++0.040384 12
++0.041178 12
++0.043017 12
++0.043551 72
++0.032065 8
++0.000190 6
++0.031284 28
++0.032842 12
++0.048555 78
++0.047158 29
++0.045818 143
++0.031712 34
++0.031014 27
++0.031754 76
++0.046920 29
++0.015668 74
++0.172504 221
++0.015773 209
++0.563294 95
++0.077993 99
++0.200079 160
++0.106455 66
++0.126037 71
++0.047200 220
++0.074651 103
++0.061081 126
++0.094627 226
++0.830253 218
++0.015243 162
++0.014023 156
++0.077708 228
++18.319927 43
++0.945859 52
++0.045999 4
++0.032891 16
++0.000196 9
++0.359569 10
++0.045561 12
++0.046834 12
++0.044601 12
++0.046864 12
++0.046016 12
++0.045359 12
++0.043129 12
++0.046472 12
++0.045642 12
++0.047371 12
++0.047250 12
++0.046576 12
++0.046880 12
++0.045894 12
++0.043398 12
++0.046074 80
++0.015719 8
++0.030857 34
++0.046224 12
++0.045831 78
++0.047122 29
++0.046113 143
++0.030854 34
++0.000373 6
++0.030856 70
++0.032049 29
++0.046118 74
++0.155634 256
++0.000357 170
++0.201843 91
++0.367782 96
++0.221947 160
++0.122060 68
++0.031546 101
++0.015985 123
++0.091541 222
++0.772893 256
++0.000263 121
++0.016381 156
++0.076166 228
++4.745263 1
++0.184998 1
++0.063109 1
++0.123841 1
++0.125666 1
++0.186480 175
++0.154219 1
++0.094042 1
++0.123352 11
++0.030660 256
++0.000265 108
++1.989792 1
++0.172498 1
++0.106566 1
++0.156065 1
++0.186913 1
++0.093776 1
++0.092482 16
++0.929023 213
++11.667539 31
++1.664262 40
++0.396695 4
++0.032239 25
++0.103621 16
++0.062055 4
++0.016313 25
++0.187206 16
++0.057956 4
++0.032361 16
++0.000393 9
++0.139443 8
++0.123833 32
++0.687802 6
++0.107969 7
++0.094942 7
++0.090453 7
++0.092391 7
++0.077698 1
++0.015048 90
++1.886635 1
++0.462612 2
++0.000311 4
++0.092852 7
++0.091798 7
++0.093094 7
++0.078791 1
++0.000253 6
++0.089103 7
++0.091394 7
++0.092828 7
++0.047054 4
++0.046077 33
++0.653487 117
++0.030427 1
++0.327110 8
++0.154794 20
++0.370866 8
++0.170250 160
++0.030308 1
++0.419108 59
++0.558488 6
++0.079444 7
++0.092887 7
++0.077431 7
++0.121977 7
++0.077352 7
++0.140396 1
++0.030441 6
++0.061808 1
++0.014891 6
++0.076928 7
++0.079979 7
++0.078098 7
++0.201139 7
++0.091381 7
++0.079573 1
++0.031555 6
++0.062825 7
++0.077414 1
++0.031291 6
++0.064459 7
++0.075087 1
++0.015746 6
++0.061733 1
++0.031083 6
++0.061917 7
++0.075917 7
++0.091111 7
++0.091570 7
++0.092152 1
++0.029825 6
++0.061683 7
++0.078499 1
++0.029960 6
++0.047243 1
++0.030696 6
++0.062704 1
++0.015304 6
++0.091882 7
++0.077132 7
++0.093848 7
++0.077871 1
++0.030835 6
++0.062395 7
++0.078088 7
++0.078140 1
++0.031499 6
++0.063679 7
++0.093183 7
++0.090103 7
++0.093063 1
++0.000244 6
++0.092810 1
++0.000323 6
++0.093976 7
++0.094206 7
++0.090753 1
++0.000436 6
++0.092418 7
++0.092818 7
++0.093007 1
++0.000323 6
++0.079258 1
++0.030804 6
++0.061641 1
++0.031470 6
++0.057000 7
++0.075187 1
++0.031243 6
++0.046221 1
++0.031478 6
++0.046656 1
++0.031018 6
++0.058254 7
++0.078416 1
++0.031410 6
++0.045871 1
++0.031769 6
++0.047254 1
++0.030687 6
++0.061618 7
++0.076699 7
++0.078255 1
++0.016440 6
++0.062234 1
++0.030928 6
++0.047068 1
++0.031373 6
++0.047047 1
++0.030765 6
++0.062591 1
++0.000340 6
++0.075097 1
++0.029724 6
++0.060487 7
++0.078528 7
++0.074929 1
++0.031336 6
++0.060605 1
++0.032182 6
++0.047120 1
++0.029361 6
++0.062744 7
++0.076714 7
++0.077864 1
++0.030388 6
++0.045894 1
++0.031437 6
++0.046703 1
++0.030634 6
++0.063158 7
++0.075076 7
++0.076193 1
++0.030319 6
++0.062582 7
++0.076827 7
++0.078900 7
++0.077607 1
++0.030528 6
++0.062371 7
++0.092764 1
++0.029461 6
++0.045848 1
++0.032033 6
++0.158407 7
++0.199886 7
++0.078586 7
++0.078756 7
++0.093029 7
++0.090446 7
++0.077767 1
++0.026996 6
++0.062554 1
++0.028656 6
++0.061801 7
++0.076688 1
++0.030886 6
++0.062044 7
++0.075446 1
++0.031845 6
++0.062388 7
++0.077403 7
++0.077930 7
++0.078436 1
++0.031300 6
++0.058659 7
++0.296752 7
++0.077810 7
++0.078967 1
++0.030401 6
++0.048490 1
++0.031475 6
++0.061491 7
++0.093769 1
++0.000404 6
++0.077190 1
++0.031077 6
++0.047854 1
++0.031264 6
++0.062361 1
++0.000253 6
++0.076474 7
++0.094065 1
++0.000315 6
++0.093496 7
++0.094452 7
++0.076925 1
++0.000447 6
++0.078085 1
++0.033052 6
++0.047262 1
++0.029878 6
++0.063234 1
++0.027811 6
++0.061561 1
++0.000250 6
++0.078723 7
++0.075479 1
++0.030625 6
++0.155226 7
++0.077383 1
++0.031186 6
++0.061698 7
++0.094000 7
++0.082297 7
++0.076735 1
++0.000901 6
++0.076514 1
++0.031819 6
++0.049334 1
++0.030700 6
++0.047298 1
++0.031141 6
++0.058872 1
++0.031856 6
++0.108569 1
++0.031834 6
++0.093470 7
++0.077107 1
++0.031405 6
++0.061269 7
++0.076438 1
++0.000320 6
++0.091794 1
++0.000270 6
++0.077891 7
++0.093768 7
++0.076765 7
++0.077791 1
++0.031209 6
++0.045645 1
++0.031884 6
++0.062276 7
++0.078228 7
++0.077295 1
++0.030565 6
++0.046455 1
++0.027448 6
++0.077686 7
++0.093671 7
++0.110229 1
++0.031678 6
++0.048157 1
++0.030901 6
++0.062255 7
++0.091817 7
++0.088168 7
++0.075309 7
++0.089418 1
++0.032306 6
++0.047138 1
++0.028276 6
++0.060266 1
++0.031762 6
++0.046933 1
++0.030840 6
++0.062259 7
++0.077341 7
++0.077254 1
++0.030510 6
++0.046515 1
++0.030624 6
++0.046237 1
++0.031239 6
++0.063126 7
++0.091966 1
++0.031559 6
++0.045736 1
++0.030957 6
++0.091000 7
++0.079977 7
++0.078958 1
++0.028860 6
++0.047823 1
++0.030850 6
++0.046673 1
++0.030891 6
++0.054563 1
++0.030711 6
++0.045588 1
++0.030397 6
++0.077056 4
++0.003480 3
++0.132217 7
++0.126929 1
++0.030736 6
++0.123362 7
++0.076354 1
++0.031010 6
++0.061879 7
++0.078585 1
++0.031673 6
++0.042768 1
++0.031637 6
++0.147860 1
++0.032972 6
++0.077318 7
++0.077364 7
++0.078827 1
++0.030498 6
++0.061291 7
++0.076219 7
++0.076117 1
++0.031929 6
++0.046277 1
++0.030539 6
++0.047008 1
++0.030907 6
++0.109286 7
++0.093548 7
++0.077315 1
++0.016065 6
++0.077514 7
++0.093171 7
++0.077317 7
++0.090698 7
++0.095516 7
++0.093896 7
++0.079780 1
++0.030940 6
++0.045507 1
++0.031538 6
++0.062138 7
++0.095782 1
++0.000325 6
++0.092453 7
++0.093406 7
++0.078383 7
++0.076879 7
++0.077265 1
++0.015512 6
++0.077778 7
++0.090485 7
++0.092841 7
++0.089811 7
++0.092245 7
++0.078225 1
++0.029964 6
++0.078610 7
++0.094336 7
++0.071134 1
++0.031472 6
++0.180044 1
++0.031913 6
++0.046986 1
++0.030947 6
++0.062332 7
++0.074791 7
++0.076961 1
++0.030975 6
++0.045995 1
++0.030620 6
++0.047222 1
++0.031552 6
++0.061887 7
++0.078056 1
++0.031102 6
++0.058551 7
++0.076490 7
++0.074822 1
++0.030441 6
++0.062759 7
++0.077210 1
++0.031699 6
++0.061994 7
++0.075827 1
++0.030702 6
++0.062523 1
++0.000332 6
++0.075844 1
++0.026365 6
++0.047646 1
++0.031387 6
++0.062533 1
++0.000352 6
++0.092999 7
++0.093023 7
++0.078355 7
++0.093248 7
++0.078460 7
++0.091774 7
++0.092089 7
++0.088173 7
++0.093105 7
++0.075722 7
++0.077830 1
++0.028409 6
++0.077188 7
++0.078491 7
++0.077181 1
++0.030755 6
++0.079609 7
++0.078827 1
++0.030764 6
++0.060855 7
++0.092842 1
++0.000328 6
++0.079227 1
++0.000272 6
++0.152932 7
++0.077788 1
++0.031013 6
++0.074613 7
++0.090881 7
++0.091869 7
++0.093154 7
++0.076988 7
++0.077099 7
++0.075487 1
++0.031650 6
++0.138003 7
++0.093419 7
++0.093629 7
++0.123936 1
++0.031155 6
++0.061346 7
++0.078796 1
++0.030721 6
++0.062725 7
++0.088994 1
++0.000313 6
++0.093497 7
++0.077828 7
++0.078996 7
++0.088615 7
++0.096843 7
++0.093551 7
++0.076234 7
++0.092615 1
++0.000288 6
++0.093378 7
++0.093024 7
++0.076874 1
++0.031043 6
++0.062584 7
++0.080602 7
++0.078080 7
++0.093839 7
++0.092139 7
++0.092712 1
++0.000246 6
++0.092306 7
++0.079137 7
++0.077683 1
++0.032004 6
++0.063011 7
++0.078284 1
++0.016047 6
++0.079715 7
++0.077785 1
++0.033124 6
++0.044065 1
++0.032777 6
++0.060273 7
++0.093997 7
++0.136793 7
++0.078357 7
++0.079828 7
++0.078068 7
++0.078363 1
++0.031034 6
++0.058958 7
++0.093154 7
++0.077357 7
++0.109105 7
++0.077434 1
++0.031559 6
++0.060442 7
++0.077151 1
++0.030801 6
++0.064853 7
++0.062419 1
++0.030114 6
++0.061465 7
++0.077680 1
++0.030976 6
++0.076537 1
++0.032494 6
++0.048306 7
++0.077961 1
++0.030863 6
++0.047418 1
++0.029228 6
++0.059691 7
++0.077442 1
++0.031929 6
++0.046939 1
++0.029066 6
++0.091585 1
++0.030148 6
++0.074291 7
++0.092746 7
++0.077096 7
++0.094010 1
++0.029525 6
++0.062275 7
++0.077982 1
++0.000298 6
++0.093374 7
++0.088276 7
++0.092363 1
++0.000283 6
++0.078895 1
++0.000361 6
++0.078188 7
++0.095993 1
++0.031938 6
++0.059847 7
++0.078089 1
++0.031304 6
++0.061137 7
++0.092511 7
++0.092943 1
++0.000296 6
++0.091826 7
++0.093530 7
++0.141886 7
++0.073594 1
++0.030609 6
++0.059404 7
++0.094881 7
++0.091793 7
++0.078871 1
++0.030815 6
++0.061902 7
++0.076490 7
++0.078916 7
++0.076212 1
++0.031328 6
++0.047539 1
++0.030827 6
++0.044095 1
++0.030812 6
++0.063733 7
++0.079123 7
++0.108191 1
++0.031915 6
++0.077764 7
++0.078420 7
++0.090584 7
++0.138472 7
++0.394835 1
++0.030729 6
++0.442888 7
++0.107719 7
++0.077351 7
++0.078325 1
++0.031080 6
++0.061972 7
++0.107881 7
++0.076790 1
++0.030574 6
++0.077720 1
++0.031032 6
++0.061573 7
++0.075802 7
++0.106152 7
++0.092624 1
++0.030683 6
++0.062102 7
++0.104746 7
++0.092658 1
++0.015565 6
++0.075839 1
++0.030354 6
++0.059759 1
++0.000438 6
++0.094573 7
++0.092936 7
++0.077517 1
++0.031340 6
++0.047060 1
++0.031021 6
++0.076391 7
++0.079024 7
++0.093547 1
++0.030541 6
++0.077492 7
++0.076661 1
++0.030470 6
++0.077819 1
++0.033400 6
++0.080202 1
++0.031234 6
++0.079056 7
++0.091066 7
++0.077484 1
++0.030699 6
++0.060979 1
++0.030833 6
++0.076525 1
++0.030542 6
++0.077937 7
++0.108492 7
++0.078623 7
++0.078067 1
++0.030941 6
++0.057824 1
++0.031343 6
++0.073228 7
++0.075211 1
++0.030390 6
++0.060817 7
++0.078148 1
++0.032176 6
++0.078344 1
++0.031337 6
++0.047088 1
++0.031343 6
++0.061921 1
++0.031840 6
++0.076939 1
++0.030675 6
++0.077405 7
++0.077204 1
++0.030656 6
++0.062064 1
++0.030616 6
++0.094015 7
++0.077033 1
++0.030827 6
++0.061417 1
++0.031291 6
++0.062068 7
++0.092652 7
++0.077263 1
++0.030707 6
++0.062296 1
++0.026688 6
++0.062854 7
++0.074974 1
++0.031753 6
++0.080433 7
++0.103304 1
++0.031028 6
++0.061483 7
++0.078143 7
++0.075588 1
++0.030708 6
++0.046871 1
++0.031560 6
++0.061440 1
++0.031479 6
++0.077623 7
++0.092172 7
++0.075575 1
++0.030831 6
++0.062028 7
++0.077044 1
++0.030332 6
++0.047563 1
++0.030607 6
++0.062609 1
++0.031119 6
++0.062136 7
++0.092279 7
++0.109055 1
++0.030986 6
++0.092510 1
++0.030912 6
++0.078074 1
++0.030677 6
++0.078537 7
++0.092875 7
++0.093239 1
++0.031079 6
++0.124084 7
++0.077350 1
++0.030803 6
++0.061845 7
++0.107489 7
++0.078934 1
++0.000617 6
++0.076670 7
++0.079237 7
++0.077620 7
++0.073818 1
++0.030127 6
++0.047287 1
++0.030337 6
++0.062354 7
++0.076272 7
++0.078522 1
++0.030886 6
++0.048418 1
++0.031143 6
++0.044116 1
++0.030730 6
++0.047119 1
++0.031481 6
++0.060938 7
++0.076801 7
++0.093747 1
++0.000285 6
++0.092080 7
++0.073727 7
++0.077317 1
++0.015803 6
++0.062567 1
++0.031138 6
++0.046500 1
++0.030402 6
++0.061600 7
++0.078205 7
++0.077526 7
++0.078637 7
++0.077434 1
++0.031100 6
++0.045514 1
++0.031229 6
++0.045837 1
++0.032139 6
++0.061909 7
++0.077298 7
++0.078396 7
++0.078712 7
++0.077835 1
++0.032195 6
++0.045997 1
++0.031194 6
++0.046685 1
++0.031449 6
++0.048434 1
++0.030642 6
++0.047363 1
++0.030966 6
++0.061586 7
++0.076997 7
++0.077545 1
++0.030386 6
++0.045401 1
++0.030843 6
++0.047294 1
++0.031677 6
++0.046834 1
++0.031530 6
++0.061744 7
++0.076988 7
++0.077159 7
++0.079119 1
++0.030680 6
++0.047339 1
++0.031062 6
++0.044991 1
++0.031859 6
++0.062835 7
++0.076977 7
++0.077221 7
++0.078467 7
++0.078483 1
++0.031035 6
++0.047012 1
++0.031176 6
++0.047062 1
++0.030544 6
++0.046652 1
++0.031677 6
++0.062609 7
++0.078258 7
++0.077663 7
++0.077339 1
++0.015651 6
++0.062024 1
++0.031414 6
++0.046719 1
++0.030234 6
++0.045953 1
++0.030054 6
++0.063521 7
++0.077726 7
++0.079191 7
++0.078456 7
++0.078318 1
++0.031152 6
++0.046253 1
++0.031231 6
++0.045932 1
++0.031032 6
++0.048290 1
++0.031021 6
++0.062675 7
++0.078056 7
++0.077614 7
++0.079092 7
++0.076697 1
++0.030823 6
++0.046642 1
++0.031288 6
++0.046657 1
++0.030330 6
++0.061797 7
++0.077840 7
++0.073172 1
++0.032436 6
++0.046531 1
++0.031054 6
++0.047503 1
++0.031518 6
++0.061570 7
++0.077600 7
++0.077989 1
++0.030896 6
++0.046757 1
++0.032362 6
++0.047833 1
++0.029809 6
++0.062257 7
++0.076125 7
++0.077949 7
++0.077752 1
++0.031140 6
++0.046880 1
++0.031501 6
++0.046071 1
++0.031592 6
++0.047785 1
++0.030510 6
++0.062677 7
++0.077600 7
++0.078101 7
++0.078541 7
++0.076417 1
++0.031587 6
++0.046843 1
++0.030579 6
++0.046613 1
++0.030580 6
++0.062140 1
++0.000159 6
++0.078218 7
++0.077722 7
++0.077988 1
++0.030871 6
++0.048031 1
++0.031030 6
++0.045593 1
++0.030848 6
++0.062383 7
++0.077443 7
++0.078730 7
++0.078173 7
++0.078489 1
++0.030215 6
++0.047130 1
++0.031960 6
++0.046233 1
++0.031017 6
++0.046226 1
++0.030438 6
++0.063601 7
++0.077181 7
++0.077549 7
++0.078146 1
++0.030581 6
++0.046888 1
++0.030799 6
++0.046633 1
++0.031701 6
++0.046391 1
++0.030984 6
++0.062659 7
++0.078014 1
++0.000291 6
++0.078537 7
++0.077306 7
++0.076821 1
++0.031028 6
++0.046758 1
++0.031230 6
++0.046389 1
++0.031890 6
++0.062621 7
++0.077245 7
++0.078202 7
++0.077505 1
++0.015791 6
++0.061771 1
++0.031132 6
++0.046490 1
++0.031276 6
++0.046704 1
++0.030810 6
++0.063292 7
++0.078493 7
++0.077950 7
++0.077741 7
++0.077228 1
++0.030695 6
++0.062474 7
++0.075044 7
++0.078079 1
++0.030167 6
++0.047725 1
++0.030478 6
++0.045037 1
++0.031875 6
++0.046743 1
++0.015161 6
++0.077626 7
++0.078021 7
++0.078203 7
++0.078298 1
++0.031955 6
++0.061723 7
++0.077543 7
++0.077836 7
++0.077572 1
++0.031689 6
++0.046377 1
++0.031437 6
++0.047662 1
++0.030874 6
++0.045509 1
++0.030689 6
++0.062296 7
++0.078765 7
++0.077382 7
++0.078645 7
++0.078780 1
++0.031755 6
++0.046812 1
++0.030497 6
++0.045870 1
++0.031472 6
++0.046118 1
++0.030978 6
++0.061737 7
++0.077856 7
++0.078979 7
++0.078294 7
++0.078363 1
++0.030461 6
++0.047156 1
++0.030866 6
++0.047210 1
++0.030770 6
++0.060977 7
++0.077808 7
++0.075924 7
++0.077876 1
++0.031155 6
++0.046306 1
++0.031848 6
++0.046689 1
++0.032251 6
++0.047073 1
++0.031572 6
++0.047476 1
++0.031705 6
++0.062333 7
++0.076568 7
++0.080097 7
++0.078729 7
++0.077776 1
++0.032272 6
++0.046726 1
++0.031272 6
++0.048477 1
++0.030844 6
++0.047377 1
++0.031485 6
++0.046455 1
++0.030812 6
++0.061831 7
++0.077358 7
++0.077229 7
++0.077437 1
++0.030539 6
++0.046921 1
++0.030711 6
++0.046100 1
++0.030659 6
++0.062361 7
++0.078352 7
++0.078731 7
++0.095801 1
++0.031093 6
++0.046879 1
++0.031104 6
++0.046913 1
++0.031610 6
++0.155539 1
++0.031564 6
++0.062033 7
++0.916469 7
++0.497268 1
++0.032756 42
++0.015688 73
++0.683996 47
++0.030989 1
++0.281947 8
++0.157263 163
++0.562075 6
++0.730035 1
++0.032095 6
++0.061852 7
++0.371719 7
++0.094699 7
++0.078738 7
++0.093448 7
++0.077593 1
++0.031740 6
++0.061655 7
++0.078278 7
++0.092095 7
++0.109038 7
++0.093264 1
++0.030461 6
++0.062125 7
++0.076555 1
++0.000180 6
++0.093265 7
++0.077475 7
++0.077745 1
++0.031029 6
++0.061610 7
++0.077731 1
++0.031086 6
++0.061561 7
++0.172587 1
++0.031999 6
++0.077716 7
++0.078064 1
++0.032033 6
++0.062713 7
++0.077092 7
++0.075658 7
++0.078736 1
++0.030660 6
++0.046504 1
++0.031116 6
++0.046381 1
++0.030630 6
++0.061666 7
++0.077993 7
++0.078291 7
++0.078787 7
++0.076881 1
++0.032375 6
++0.046473 1
++0.031426 6
++0.046889 1
++0.031294 6
++0.045889 1
++0.031208 6
++0.061886 7
++0.077422 1
++0.014721 6
++0.061980 7
++0.078485 1
++0.031502 6
++0.046078 1
++0.031152 6
++0.046452 1
++0.030593 6
++0.563493 7
++0.386650 125
++0.031668 4
++0.015934 40
++0.031630 1
++0.280587 8
++0.156281 31
++0.622655 6
++0.798461 7
++0.079481 1
++0.031896 6
++0.357365 1
++0.030756 6
++0.062288 1
++0.015240 6
++0.525344 1
++0.031573 6
++0.342313 1
++0.031799 6
++0.062466 1
++0.031419 6
++0.062032 1
++0.000285 6
++0.077098 1
++0.000537 6
++0.077301 7
++0.079767 7
++0.077882 7
++0.077254 1
++0.015498 6
++0.075442 7
++0.078870 7
++0.078218 1
++0.031789 6
++0.048227 1
++0.031373 6
++0.062702 7
++0.076695 1
++0.030556 6
++0.046949 1
++0.031472 6
++0.061300 7
++0.030762 129
++0.016015 200
++0.032060 256
++0.000343 256
++0.000195 203
++0.029493 1
++0.031827 3
++0.014864 218
++23.710052 22
++0.699312 10
++14.874089 43
++1.062402 52
++0.431725 4
++0.032054 25
++0.107984 16
++0.047577 4
++0.033083 16
++0.000257 9
++0.197827 16
++0.046661 4
++0.015884 16
++0.014751 9
++0.078426 8
++0.187318 39
++0.547997 6
++0.777598 1
++0.031045 6
++0.078421 7
++0.077983 7
++0.325878 7
++0.094946 7
++0.077753 7
++0.093696 7
++0.078724 1
++0.030340 6
++0.047127 1
++0.032309 6
++0.094305 1
++0.031589 6
++0.062926 7
++0.093968 7
++0.078574 7
++0.141167 1
++0.015942 6
++0.062743 1
++0.030636 6
++0.075633 7
++0.123450 1
++0.031170 6
++0.062021 1
++0.030866 6
++0.047459 1
++0.030485 6
++0.047335 1
++0.031741 6
++0.061048 7
++0.077196 7
++0.077847 7
++0.077919 1
++0.030774 6
++0.047099 1
++0.031297 6
++0.512387 7
++0.373649 1
++0.015204 127
++0.015305 200
++0.062584 218
++6.762032 1
++0.188091 1
++0.063230 1
++0.139568 1
++0.139919 1
++0.232376 175
++0.155242 1
++0.093556 1
++0.077300 1
++0.108434 1
++0.062519 1
++0.093390 1
++0.125168 1
++0.030240 1
++0.077961 1
++0.124301 1
++0.109832 11
++0.046736 4
++0.031296 16
++0.000248 9
++0.076727 256
++0.000376 256
++0.000284 31
++0.030425 2
++0.046097 180
++1.864420 1
++0.139074 1
++0.078371 1
++0.124329 1
++0.112479 1
++0.093479 1
++0.155769 1
++0.060972 1
++0.157837 1
++0.322799 11
++0.046598 4
++0.016549 25
++0.077774 256
++0.000292 30
++0.014560 256
++0.000293 256
++0.000360 109
++0.077659 180
++0.761021 1
++0.124588 1
++0.078146 1
++0.138764 1
++0.326720 1
++0.046420 1
++0.124248 1
++0.061317 1
++0.110461 1
++0.156298 1
++0.479934 11
++0.047358 4
++0.016043 16
++0.000282 9
++0.061372 146
++0.000200 70
++0.015505 256
++0.000273 256
++0.000350 256
++0.000289 256
++0.000312 256
++0.000227 256
++0.000182 256
++0.000146 112
++0.060246 180
++11.378778 1
++0.124589 1
++0.077010 1
++0.093668 1
++0.436797 1
++0.077964 1
++0.171219 1
++0.155753 1
++0.170976 1
++0.061468 1
++0.092878 1
++0.093162 1
++0.110112 1
++0.061673 1
++0.077802 1
++0.265217 1
++0.093165 1
++0.266876 1
++0.919760 1
++0.137991 1
++0.046722 1
++0.062941 1
++0.140539 1
++0.078521 1
++0.156705 1
++0.108590 1
++0.247457 1
++0.093320 1
++0.155586 1
++0.030788 1
++0.110222 1
++0.234017 1
++0.327810 11
++0.047002 4
++0.030423 16
++0.000370 9
++0.153233 42
++0.015641 256
++0.000923 184
++0.000336 136
++0.014487 256
++0.000231 256
++0.000160 256
++0.000229 256
++0.000125 134
++0.061325 180
++0.483822 1
++0.077514 1
++0.160614 2
++0.105291 1
++0.046791 1
++0.093757 1
++0.107919 1
++0.433829 11
++0.046083 4
++0.031613 16
++0.000347 9
++1.758341 30
++0.015288 117
++0.014954 72
++0.031453 60
++0.015526 127
++0.727754 185
++0.062404 180
++264.117864 1
++0.095418 1
++0.200093 1
++0.062365 1
++0.652923 1
++0.139579 1
++0.124086 1
++0.059790 1
++0.046044 1
++0.079479 1
++0.124383 1
++0.077903 1
++0.172457 1
++0.220810 1
++0.110075 1
++0.476110 1
++0.079172 1
++0.077794 1
++0.172833 1
++0.120043 1
++0.156292 1
++0.113708 1
++0.095237 1
++0.371926 11
++0.327330 96
++0.076997 47
++2.178463 80
++0.045440 256
++0.000281 256
++0.000154 256
++0.000119 256
++0.000128 256
++0.000145 256
++0.000131 256
++0.000302 256
++0.000165 256
++0.000124 256
++0.000142 256
++0.000127 256
++0.000128 256
++0.000131 256
++0.000138 256
++0.000173 256
++0.000216 256
++0.000159 256
++0.000102 256
++0.000117 256
++0.000154 256
++0.000149 256
++0.000113 256
++0.000436 256
++0.000297 23
++0.058335 256
++0.000196 256
++0.000153 256
++0.000137 256
++0.000145 256
++0.000144 256
++0.000132 256
++0.000132 256
++0.000405 256
++0.000168 256
++0.000122 256
++0.000085 256
++0.000147 256
++0.000148 256
++0.000137 256
++0.000120 256
++0.000118 256
++0.000090 256
++0.000095 256
++0.000091 256
++0.000099 256
++0.000137 256
++0.000117 256
++0.000175 192
++0.877811 1
++0.311098 30
++0.156106 1
++0.219577 1
++0.186494 254
++0.605962 175
++0.205220 175
++0.186453 1
++0.091973 1
++0.125616 11
++0.031081 256
++0.000265 108
++0.846939 1
++0.139939 1
++0.079675 1
++0.106462 1
++0.247115 17
+diff --git a/backend-netcore-sse-amq/Controllers/InfoController.cs b/backend-netcore-sse-amq/Controllers/InfoController.cs
+new file mode 100644
+index 0000000..8054eae
+--- /dev/null
++++ b/backend-netcore-sse-amq/Controllers/InfoController.cs
+@@ -0,0 +1,45 @@
++using Microsoft.AspNetCore.Mvc;
++using System.Threading;
++using System.Threading.Tasks;
++using MyProject.Services;
++
++namespace MyProject.Controllers
++{
++    /// <summary>
++    /// InfoController provides an endpoint for the Info Page to receive messages via SSE.
++    /// </summary>
++    [ApiController]
++    [Route("api/info")]
++    public class InfoController : ControllerBase
++    {
++        private readonly AMQConsumerSse _consumerSse;
++
++        public InfoController(AMQConsumerSse consumerSse)
++        {
++            _consumerSse = consumerSse;
++        }
++
++        /// <summary>
++        /// SSE endpoint to stream messages for a specific infoId.
++        /// The response is kept open and messages are sent in SSE format.
++        /// </summary>
++        [HttpGet("stream")]
++        public async Task Stream([FromQuery] string id, CancellationToken cancellationToken)
++        {
++            LoggerHelper.Info($"SSE stream requested for infoId: {id}");
++            if (string.IsNullOrEmpty(id))
++            {
++                LoggerHelper.Warn("No infoId provided in query, defaulting to 'default'.");
++                id = "default";
++            }
++
++            // Set the response header to use SSE content type.
++            Response.Headers.Add("Content-Type", "text/event-stream");
++            LoggerHelper.Debug("Response header set to text/event-stream.");
++
++            // Start the consumer loop to stream messages.
++            await _consumerSse.StartConsumerAsync(id, Response, cancellationToken);
++            LoggerHelper.Info("Exiting Stream endpoint.");
++        }
++    }
++}
+diff --git a/backend-netcore-sse-amq/Controllers/ToolbarController.cs b/backend-netcore-sse-amq/Controllers/ToolbarController.cs
+new file mode 100644
+index 0000000..763579b
+--- /dev/null
++++ b/backend-netcore-sse-amq/Controllers/ToolbarController.cs
+@@ -0,0 +1,50 @@
++using Microsoft.AspNetCore.Mvc;
++using MyProject.Services;
++
++namespace MyProject.Controllers
++{
++    /// <summary>
++    /// ToolbarController provides a REST endpoint to receive messages from the Toolbar UI.
++    /// It uses AMQPublisher to send messages to ActiveMQ.
++    /// </summary>
++    [ApiController]
++    [Route("api/toolbar")]
++    public class ToolbarController : ControllerBase
++    {
++        private readonly AMQPublisher _publisher;
++
++        public ToolbarController(AMQPublisher publisher)
++        {
++            _publisher = publisher;
++        }
++
++        /// <summary>
++        /// DTO for receiving toolbar messages.
++        /// </summary>
++        public class ToolbarMessageDto
++        {
++            public string id { get; set; }
++            public string text { get; set; }
++        }
++
++        /// <summary>
++        /// Receives a POST request to send a message.
++        /// Logs all major steps.
++        /// </summary>
++        [HttpPost("send")]
++        public IActionResult SendMessage([FromBody] ToolbarMessageDto message)
++        {
++            LoggerHelper.Debug("Received SendMessage request from Toolbar.");
++
++            if (message == null || string.IsNullOrWhiteSpace(message.text))
++            {
++                LoggerHelper.Warn("Message text is null or empty.");
++                return BadRequest("Message text is required.");
++            }
++
++            _publisher.PublishMessage(message.id, message.text);
++            LoggerHelper.Info("Message processed and published from Toolbar.");
++            return Ok("Message published successfully.");
++        }
++    }
++}
+diff --git a/backend-netcore-sse-amq/Program.cs b/backend-netcore-sse-amq/Program.cs
+index 9bf0590..c01b40a 100644
+--- a/backend-netcore-sse-amq/Program.cs
++++ b/backend-netcore-sse-amq/Program.cs
+@@ -1,39 +1,33 @@
++using Microsoft.AspNetCore.Builder;
++using Microsoft.Extensions.DependencyInjection;
++using Microsoft.Extensions.Hosting;
++using MyProject.Services;
++
+ var builder = WebApplication.CreateBuilder(args);
+ 
+-// Add services to the container.
+-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+-builder.Services.AddOpenApi();
++// Register controllers and custom services in dependency injection.
++builder.Services.AddControllers();
++builder.Services.AddSingleton<AMQConnectionManager>();  // Manages shared ActiveMQ connection.
++builder.Services.AddSingleton<AMQPublisher>();          // Publishes messages to ActiveMQ.
++builder.Services.AddSingleton<AMQConsumerSse>();          // Handles SSE consumption from ActiveMQ.
++
++// Configure CORS to allow requests from any origin (adjust for production as needed).
++builder.Services.AddCors(options =>
++{
++    options.AddPolicy("AllowAll", policy =>
++        policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
++});
+ 
+ var app = builder.Build();
+ 
+-// Configure the HTTP request pipeline.
+-if (app.Environment.IsDevelopment())
+-{
+-    app.MapOpenApi();
+-}
++// Log application startup.
++LoggerHelper.Info("Application starting up...");
+ 
+-var summaries = new[]
+-{
+-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+-};
++// Enable CORS.
++app.UseCors("AllowAll");
+ 
+-app.MapGet("/weatherforecast", () =>
+-{
+-    var forecast =  Enumerable.Range(1, 5).Select(index =>
+-        new WeatherForecast
+-        (
+-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+-            Random.Shared.Next(-20, 55),
+-            summaries[Random.Shared.Next(summaries.Length)]
+-        ))
+-        .ToArray();
+-    return forecast;
+-})
+-.WithName("GetWeatherForecast");
++// Map controller endpoints.
++app.MapControllers();
+ 
++// Start the application.
+ app.Run();
+-
+-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
+-{
+-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+-}
+diff --git a/backend-netcore-sse-amq/Properties/launchSettings.json b/backend-netcore-sse-amq/Properties/launchSettings.json
+index 587181b..41b5d01 100644
+--- a/backend-netcore-sse-amq/Properties/launchSettings.json
++++ b/backend-netcore-sse-amq/Properties/launchSettings.json
+@@ -1,11 +1,10 @@
+-﻿{
+-  "$schema": "https://json.schemastore.org/launchsettings.json",
++{
+   "profiles": {
+-    "http": {
++    "backend-netcore-sse-amq": {
+       "commandName": "Project",
+-      "dotnetRunMessages": true,
+-      "launchBrowser": false,
+-      "applicationUrl": "http://localhost:5262",
++      "dotnetRunMessages": "true",
++      "launchBrowser": true,
++      "applicationUrl": "http://localhost:5000",
+       "environmentVariables": {
+         "ASPNETCORE_ENVIRONMENT": "Development"
+       }
+diff --git a/backend-netcore-sse-amq/Services/AMQConnectionManager.cs b/backend-netcore-sse-amq/Services/AMQConnectionManager.cs
+new file mode 100644
+index 0000000..7129103
+--- /dev/null
++++ b/backend-netcore-sse-amq/Services/AMQConnectionManager.cs
+@@ -0,0 +1,51 @@
++using Apache.NMS;
++using Apache.NMS.ActiveMQ;
++using System;
++
++namespace MyProject.Services
++{
++    /// <summary>
++    /// AMQConnectionManager handles the creation and retrieval of a shared ActiveMQ connection.
++    /// This ensures a single connection is used across the application.
++    /// </summary>
++    public class AMQConnectionManager
++    {
++        private readonly string brokerUri = "tcp://localhost:61616";
++        private readonly string userName = "admin";
++        private readonly string password = "admin";
++        private IConnection _connection;
++        private readonly object _lock = new object();
++
++        /// <summary>
++        /// Returns a shared ActiveMQ connection, creating one if necessary.
++        /// </summary>
++        public IConnection GetConnection()
++        {
++            LoggerHelper.Debug("Entering GetConnection method.");
++            if (_connection == null)
++            {
++                lock (_lock)
++                {
++                    if (_connection == null)
++                    {
++                        try
++                        {
++                            LoggerHelper.Info("Creating new ActiveMQ connection...");
++                            var factory = new ConnectionFactory(brokerUri);
++                            _connection = factory.CreateConnection(userName, password);
++                            _connection.Start();
++                            LoggerHelper.Info("ActiveMQ connection successfully established.");
++                        }
++                        catch (Exception ex)
++                        {
++                            LoggerHelper.Fatal("Failed to create ActiveMQ connection.", ex);
++                            throw;
++                        }
++                    }
++                }
++            }
++            LoggerHelper.Debug("Exiting GetConnection method.");
++            return _connection;
++        }
++    }
++}
+diff --git a/backend-netcore-sse-amq/Services/AMQConsumerSse.cs b/backend-netcore-sse-amq/Services/AMQConsumerSse.cs
+new file mode 100644
+index 0000000..47a94f8
+--- /dev/null
++++ b/backend-netcore-sse-amq/Services/AMQConsumerSse.cs
+@@ -0,0 +1,72 @@
++using Apache.NMS;
++using System;
++using System.Text;
++using System.Threading;
++using System.Threading.Tasks;
++using Microsoft.AspNetCore.Http;
++
++namespace MyProject.Services
++{
++    /// <summary>
++    /// AMQConsumerSse creates a consumer that listens to ActiveMQ messages filtered by "id"
++    /// and writes them to the HTTP response in SSE format.
++    /// </summary>
++    public class AMQConsumerSse
++    {
++        private readonly AMQConnectionManager _connectionManager;
++        private readonly string queueName = "MyQueue";
++
++        public AMQConsumerSse(AMQConnectionManager connectionManager)
++        {
++            _connectionManager = connectionManager;
++        }
++
++        /// <summary>
++        /// Starts a consumer for messages matching the provided infoId.
++        /// Each received message is sent to the client as an SSE event.
++        /// </summary>
++        public async Task StartConsumerAsync(string infoId, HttpResponse response, CancellationToken cancellationToken)
++        {
++            LoggerHelper.Debug($"Starting AMQConsumerSse for infoId: {infoId}");
++            var connection = _connectionManager.GetConnection();
++            using (var session = connection.CreateSession(AcknowledgementMode.Transactional))
++            {
++                IDestination destination = session.GetQueue(queueName);
++                string selector = $"id = '{infoId}'";
++                LoggerHelper.Debug($"Using JMS selector: {selector}");
++                using (var consumer = session.CreateConsumer(destination, selector))
++                {
++                    LoggerHelper.Info("Consumer created and listening for messages...");
++                    while (!cancellationToken.IsCancellationRequested)
++                    {
++                        IMessage msg = consumer.Receive(TimeSpan.FromSeconds(1));
++                        if (msg == null)
++                        {
++                            LoggerHelper.Debug("No message received in this cycle; waiting...");
++                            await Task.Delay(500, cancellationToken);
++                            continue;
++                        }
++                        if (msg is ITextMessage textMsg)
++                        {
++                            string body = textMsg.Text;
++                            LoggerHelper.Info($"Message received: {body}");
++                            string sseMessage = $"data: {body}\n\n";
++                            byte[] data = Encoding.UTF8.GetBytes(sseMessage);
++                            await response.Body.WriteAsync(data, 0, data.Length, cancellationToken);
++                            await response.Body.FlushAsync(cancellationToken);
++                            LoggerHelper.Debug("SSE message written to response stream.");
++                            session.Commit();
++                            LoggerHelper.Debug("Session committed after processing message.");
++                        }
++                        else
++                        {
++                            session.Commit();
++                            LoggerHelper.Warn("Non-text message received; session committed without processing.");
++                        }
++                    }
++                }
++            }
++            LoggerHelper.Info("Exiting AMQConsumerSse.StartConsumerAsync loop.");
++        }
++    }
++}
+diff --git a/backend-netcore-sse-amq/Services/AMQPublisher.cs b/backend-netcore-sse-amq/Services/AMQPublisher.cs
+new file mode 100644
+index 0000000..897d878
+--- /dev/null
++++ b/backend-netcore-sse-amq/Services/AMQPublisher.cs
+@@ -0,0 +1,62 @@
++using Apache.NMS;
++using Newtonsoft.Json;
++using System;
++
++namespace MyProject.Services
++{
++    /// <summary>
++    /// AMQPublisher publishes messages to the ActiveMQ queue.
++    /// It serializes the payload to JSON and sets the JMS property "id" for filtering.
++    /// </summary>
++    public class AMQPublisher
++    {
++        private readonly AMQConnectionManager _connectionManager;
++        private readonly string queueName = "MyQueue";
++
++        public AMQPublisher(AMQConnectionManager connectionManager)
++        {
++            _connectionManager = connectionManager;
++        }
++
++        /// <summary>
++        /// Publishes a message with the given infoId and message text.
++        /// Logs detailed information at each step.
++        /// </summary>
++        public void PublishMessage(string infoId, string messageText)
++        {
++            LoggerHelper.Debug($"PublishMessage called with infoId: {infoId} and messageText: {messageText}");
++
++            if (string.IsNullOrEmpty(infoId))
++            {
++                LoggerHelper.Warn("infoId is null or empty, defaulting to 'default'.");
++                infoId = "default";
++            }
++
++            try
++            {
++                var connection = _connectionManager.GetConnection();
++                using (var session = connection.CreateSession(AcknowledgementMode.AutoAcknowledge))
++                {
++                    LoggerHelper.Debug("ActiveMQ session created for publishing.");
++                    IDestination destination = session.GetQueue(queueName);
++                    using (var producer = session.CreateProducer(destination))
++                    {
++                        LoggerHelper.Info($"Producer created for queue: {queueName}");
++                        var payload = new { id = infoId, text = messageText };
++                        string json = JsonConvert.SerializeObject(payload);
++                        LoggerHelper.Debug($"Serialized payload: {json}");
++                        ITextMessage message = session.CreateTextMessage(json);
++                        message.Properties.SetString("id", infoId);
++                        LoggerHelper.Debug($"Set JMS property 'id' to: {infoId}");
++                        producer.Send(message);
++                        LoggerHelper.Info("Message published successfully to ActiveMQ.");
++                    }
++                }
++            }
++            catch (Exception ex)
++            {
++                LoggerHelper.Error("Error occurred while publishing message.", ex);
++            }
++        }
++    }
++}
+diff --git a/backend-netcore-sse-amq/Services/LoggerHelper.cs b/backend-netcore-sse-amq/Services/LoggerHelper.cs
+new file mode 100644
+index 0000000..535b62b
+--- /dev/null
++++ b/backend-netcore-sse-amq/Services/LoggerHelper.cs
+@@ -0,0 +1,68 @@
++using System;
++using System.Diagnostics;
++
++namespace MyProject.Services
++{
++    /// <summary>
++    /// LoggerHelper provides static methods to log messages at various levels.
++    /// It includes detailed logs and timestamps, similar to the original LoggerWrapper.
++    /// </summary>
++    public static class LoggerHelper
++    {
++        private static readonly TraceSource Trace = new TraceSource("LoggerHelper");
++        public static bool EnableDebugLogs { get; set; } = true;
++
++        static LoggerHelper()
++        {
++            Trace.Listeners.Add(new ConsoleTraceListener());
++            Trace.Switch = new SourceSwitch("LoggerSwitch", "All");
++        }
++
++        public static void Debug(string message)
++        {
++            if (EnableDebugLogs)
++                Log(TraceEventType.Verbose, message);
++        }
++
++        public static void Info(string message)
++        {
++            if (EnableDebugLogs)
++                Log(TraceEventType.Information, message);
++        }
++
++        public static void Warn(string message)
++        {
++            Log(TraceEventType.Warning, message);
++        }
++
++        public static void Error(string message)
++        {
++            Log(TraceEventType.Error, message);
++        }
++
++        public static void Fatal(string message)
++        {
++            Log(TraceEventType.Critical, message);
++        }
++
++        public static void Error(string message, Exception ex)
++        {
++            Log(TraceEventType.Error, $"{message} | Exception: {ex}");
++        }
++
++        public static void Fatal(string message, Exception ex)
++        {
++            Log(TraceEventType.Critical, $"{message} | Exception: {ex}");
++        }
++
++        /// <summary>
++        /// Writes a log message with the specified log level and timestamp.
++        /// </summary>
++        private static void Log(TraceEventType level, string message)
++        {
++            string logMessage = $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] {level}: {message}";
++            Trace.TraceEvent(level, 0, logMessage);
++            Trace.Flush();
++        }
++    }
++}
+diff --git a/backend-netcore-sse-amq/appsettings.Development.json b/backend-netcore-sse-amq/appsettings.Development.json
+index 0c208ae..4f30a00 100644
+--- a/backend-netcore-sse-amq/appsettings.Development.json
++++ b/backend-netcore-sse-amq/appsettings.Development.json
+@@ -1,8 +1,9 @@
+ {
+   "Logging": {
+     "LogLevel": {
+-      "Default": "Information",
+-      "Microsoft.AspNetCore": "Warning"
++      "Default": "Debug",
++      "Microsoft": "Warning",
++      "Microsoft.Hosting.Lifetime": "Information"
+     }
+   }
+ }
+diff --git a/backend-netcore-sse-amq/appsettings.json b/backend-netcore-sse-amq/appsettings.json
+index 10f68b8..4f30a00 100644
+--- a/backend-netcore-sse-amq/appsettings.json
++++ b/backend-netcore-sse-amq/appsettings.json
+@@ -1,9 +1,9 @@
+ {
+   "Logging": {
+     "LogLevel": {
+-      "Default": "Information",
+-      "Microsoft.AspNetCore": "Warning"
++      "Default": "Debug",
++      "Microsoft": "Warning",
++      "Microsoft.Hosting.Lifetime": "Information"
+     }
+-  },
+-  "AllowedHosts": "*"
++  }
+ }
+diff --git a/backend-netcore-sse-amq/backend-netcore-sse-amq.csproj b/backend-netcore-sse-amq/backend-netcore-sse-amq.csproj
+index 7d22d42..57e3706 100644
+--- a/backend-netcore-sse-amq/backend-netcore-sse-amq.csproj
++++ b/backend-netcore-sse-amq/backend-netcore-sse-amq.csproj
+@@ -1,16 +1,14 @@
+ <Project Sdk="Microsoft.NET.Sdk.Web">
+ 
+   <PropertyGroup>
+-    <TargetFramework>net9.0</TargetFramework>
++    <TargetFramework>net7.0</TargetFramework>
+     <Nullable>enable</Nullable>
+     <ImplicitUsings>enable</ImplicitUsings>
+-    <RootNamespace>backend_netcore_sse_amq</RootNamespace>
+   </PropertyGroup>
+ 
+   <ItemGroup>
+-    <PackageReference Include="Apache.NMS.ActiveMQ" Version="2.1.1" />
+-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2" />
+-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
++    <PackageReference Include="Apache.NMS.ActiveMQ" Version="1.7.2" />
++    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+   </ItemGroup>
+ 
+ </Project>
+diff --git a/backend-netcore-sse-amq/backend-netcore-sse-amq.http b/backend-netcore-sse-amq/backend-netcore-sse-amq.http
+index 53a9e9d..84e00dc 100644
+--- a/backend-netcore-sse-amq/backend-netcore-sse-amq.http
++++ b/backend-netcore-sse-amq/backend-netcore-sse-amq.http
+@@ -1,6 +1,8 @@
+-@backend_netcore_sse_amq_HostAddress = http://localhost:5262
++### Test Toolbar Message
++POST http://localhost:5000/api/toolbar/send
++Content-Type: application/json
+ 
+-GET {{backend_netcore_sse_amq_HostAddress}}/weatherforecast/
+-Accept: application/json
+-
+-###
++{
++  "id": "test",
++  "text": "Hello from Toolbar!"
++}
+diff --git a/frontend-react-sse/.gitignore b/frontend-react-sse/.gitignore
+index 4d29575..17c578e 100644
+--- a/frontend-react-sse/.gitignore
++++ b/frontend-react-sse/.gitignore
+@@ -1,23 +1,3 @@
+-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+-
+-# dependencies
+-/node_modules
+-/.pnp
+-.pnp.js
+-
+-# testing
+-/coverage
+-
+-# production
+-/build
+-
+-# misc
+-.DS_Store
+-.env.local
+-.env.development.local
+-.env.test.local
+-.env.production.local
+-
+-npm-debug.log*
+-yarn-debug.log*
+-yarn-error.log*
++node_modules/
++build/
++.env
+diff --git a/frontend-react-sse/README.md b/frontend-react-sse/README.md
+index 58beeac..837a68e 100644
+--- a/frontend-react-sse/README.md
++++ b/frontend-react-sse/README.md
+@@ -1,70 +1,4 @@
+-# Getting Started with Create React App
++# frontend-react-sse
+ 
+-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+-
+-## Available Scripts
+-
+-In the project directory, you can run:
+-
+-### `npm start`
+-
+-Runs the app in the development mode.\
+-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-
+-The page will reload when you make changes.\
+-You may also see any lint errors in the console.
+-
+-### `npm test`
+-
+-Launches the test runner in the interactive watch mode.\
+-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-
+-### `npm run build`
+-
+-Builds the app for production to the `build` folder.\
+-It correctly bundles React in production mode and optimizes the build for the best performance.
+-
+-The build is minified and the filenames include the hashes.\
+-Your app is ready to be deployed!
+-
+-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-
+-### `npm run eject`
+-
+-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-
+-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-
+-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-
+-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+-
+-## Learn More
+-
+-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-
+-To learn React, check out the [React documentation](https://reactjs.org/).
+-
+-### Code Splitting
+-
+-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+-
+-### Analyzing the Bundle Size
+-
+-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+-
+-### Making a Progressive Web App
+-
+-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+-
+-### Advanced Configuration
+-
+-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+-
+-### Deployment
+-
+-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+-
+-### `npm run build` fails to minify
+-
+-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
++This is the React client for the RunnableSSEOverAmqCoreReactDemo project.
++It consumes Server-Sent Events (SSE) from the backend and provides a toolbar for sending messages.
+diff --git a/frontend-react-sse/package.json b/frontend-react-sse/package.json
+index f809920..764e66e 100644
+--- a/frontend-react-sse/package.json
++++ b/frontend-react-sse/package.json
+@@ -3,39 +3,16 @@
+   "version": "0.1.0",
+   "private": true,
+   "dependencies": {
+-    "@testing-library/dom": "^10.4.0",
+-    "@testing-library/jest-dom": "^6.6.3",
+-    "@testing-library/react": "^16.2.0",
+-    "@testing-library/user-event": "^13.5.0",
+-    "axios": "^1.8.2",
+-    "react": "^19.0.0",
+-    "react-dom": "^19.0.0",
+-    "react-router-dom": "^7.3.0",
+-    "react-scripts": "5.0.1",
+-    "web-vitals": "^2.1.4"
++    "axios": "^0.27.2",
++    "react": "^18.2.0",
++    "react-dom": "^18.2.0",
++    "react-router-dom": "^6.3.0",
++    "react-scripts": "5.0.1"
+   },
+   "scripts": {
+     "start": "react-scripts start",
+     "build": "react-scripts build",
+     "test": "react-scripts test",
+     "eject": "react-scripts eject"
+-  },
+-  "eslintConfig": {
+-    "extends": [
+-      "react-app",
+-      "react-app/jest"
+-    ]
+-  },
+-  "browserslist": {
+-    "production": [
+-      ">0.2%",
+-      "not dead",
+-      "not op_mini all"
+-    ],
+-    "development": [
+-      "last 1 chrome version",
+-      "last 1 firefox version",
+-      "last 1 safari version"
+-    ]
+   }
+ }
+diff --git a/frontend-react-sse/public/index.html b/frontend-react-sse/public/index.html
+index aa069f2..b0f86a0 100644
+--- a/frontend-react-sse/public/index.html
++++ b/frontend-react-sse/public/index.html
+@@ -4,40 +4,10 @@
+     <meta charset="utf-8" />
+     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+-    <meta name="theme-color" content="#000000" />
+-    <meta
+-      name="description"
+-      content="Web site created using create-react-app"
+-    />
+-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+-    <!--
+-      manifest.json provides metadata used when your web app is installed on a
+-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+-    -->
+-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+-    <!--
+-      Notice the use of %PUBLIC_URL% in the tags above.
+-      It will be replaced with the URL of the `public` folder during the build.
+-      Only files inside the `public` folder can be referenced from the HTML.
+-
+-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+-      work correctly both with client-side routing and a non-root public URL.
+-      Learn how to configure a non-root public URL by running `npm run build`.
+-    -->
+-    <title>React App</title>
++    <title>frontend-react-sse</title>
+   </head>
+   <body>
+     <noscript>You need to enable JavaScript to run this app.</noscript>
+     <div id="root"></div>
+-    <!--
+-      This HTML file is a template.
+-      If you open it directly in the browser, you will see an empty page.
+-
+-      You can add webfonts, meta tags, or analytics to this file.
+-      The build step will place the bundled scripts into the <body> tag.
+-
+-      To begin the development, run `npm start` or `yarn start`.
+-      To create a production bundle, use `npm run build` or `yarn build`.
+-    -->
+   </body>
+ </html>
+diff --git a/frontend-react-sse/public/manifest.json b/frontend-react-sse/public/manifest.json
+index 080d6c7..2cfd647 100644
+--- a/frontend-react-sse/public/manifest.json
++++ b/frontend-react-sse/public/manifest.json
+@@ -1,21 +1,16 @@
+ {
+-  "short_name": "React App",
+-  "name": "Create React App Sample",
++  "short_name": "ReactSSE",
++  "name": "frontend-react-sse",
+   "icons": [
+-    {
+-      "src": "favicon.ico",
+-      "sizes": "64x64 32x32 24x24 16x16",
+-      "type": "image/x-icon"
+-    },
+     {
+       "src": "logo192.png",
+-      "type": "image/png",
+-      "sizes": "192x192"
++      "sizes": "192x192",
++      "type": "image/png"
+     },
+     {
+       "src": "logo512.png",
+-      "type": "image/png",
+-      "sizes": "512x512"
++      "sizes": "512x512",
++      "type": "image/png"
+     }
+   ],
+   "start_url": ".",
+diff --git a/frontend-react-sse/public/robots.txt b/frontend-react-sse/public/robots.txt
+index e9e57dc..eb05362 100644
+--- a/frontend-react-sse/public/robots.txt
++++ b/frontend-react-sse/public/robots.txt
+@@ -1,3 +1,2 @@
+-# https://www.robotstxt.org/robotstxt.html
+ User-agent: *
+ Disallow:
+diff --git a/frontend-react-sse/src/App.js b/frontend-react-sse/src/App.js
+index 3784575..a59d7ac 100644
+--- a/frontend-react-sse/src/App.js
++++ b/frontend-react-sse/src/App.js
+@@ -1,24 +1,31 @@
+-import logo from './logo.svg';
+-import './App.css';
++import React from 'react';
++import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
++import InfoPage from './components/InfoPage';
++import Toolbar from './components/Toolbar';
+ 
++/**
++ * App component defines the main routes and navigation.
++ * It logs application mounting.
++ */
+ function App() {
++  console.log("[App] Application mounted.");
+   return (
+-    <div className="App">
+-      <header className="App-header">
+-        <img src={logo} className="App-logo" alt="logo" />
+-        <p>
+-          Edit <code>src/App.js</code> and save to reload.
+-        </p>
+-        <a
+-          className="App-link"
+-          href="https://reactjs.org"
+-          target="_blank"
+-          rel="noopener noreferrer"
+-        >
+-          Learn React
+-        </a>
+-      </header>
+-    </div>
++    <Router>
++      <nav>
++        <ul>
++          <li>
++            <Link to="/info">Info Page</Link>
++          </li>
++          <li>
++            <Link to="/toolbar">Toolbar</Link>
++          </li>
++        </ul>
++      </nav>
++      <Routes>
++        <Route path="/info" element={<InfoPage />} />
++        <Route path="/toolbar" element={<Toolbar />} />
++      </Routes>
++    </Router>
+   );
+ }
+ 
+diff --git a/frontend-react-sse/src/components/InfoPage.js b/frontend-react-sse/src/components/InfoPage.js
+new file mode 100644
+index 0000000..00d1a2f
+--- /dev/null
++++ b/frontend-react-sse/src/components/InfoPage.js
+@@ -0,0 +1,85 @@
++import React, { useState, useEffect } from 'react';
++
++/**
++ * InfoPage component:
++ * - Prompts the user for an Info ID.
++ * - Connects to the backend SSE endpoint to receive real-time messages.
++ * - Contains detailed logs for every major step.
++ */
++const InfoPage = () => {
++  const [messages, setMessages] = useState([]);
++  const [infoId, setInfoId] = useState('');
++  const [isConnected, setIsConnected] = useState(false);
++
++  useEffect(() => {
++    if (!infoId) {
++      console.log("[InfoPage] No Info ID provided yet.");
++      return;
++    }
++
++    console.log(\`[InfoPage] Starting SSE connection for Info ID: \${infoId}\`);
++    const eventSource = new EventSource(\`http://localhost:5000/api/info/stream?id=\${infoId}\`);
++
++    eventSource.onopen = () => {
++      console.log("[InfoPage] SSE connection established.");
++      setIsConnected(true);
++    };
++
++    eventSource.onmessage = (e) => {
++      console.log("[InfoPage] Message received:", e.data);
++      setMessages((prev) => [...prev, e.data]);
++    };
++
++    eventSource.onerror = (err) => {
++      console.error("[InfoPage] Error in SSE connection:", err);
++      eventSource.close();
++      setIsConnected(false);
++    };
++
++    return () => {
++      console.log("[InfoPage] Closing SSE connection.");
++      eventSource.close();
++    };
++  }, [infoId]);
++
++  const handleIdSubmit = (e) => {
++    e.preventDefault();
++    const id = e.target.elements.infoId.value.trim();
++    if (id) {
++      console.log(\`[InfoPage] Info ID set to: \${id}\`);
++      setInfoId(id);
++    } else {
++      console.warn("[InfoPage] Empty Info ID entered.");
++    }
++  };
++
++  return (
++    <div>
++      {!infoId ? (
++        <form onSubmit={handleIdSubmit}>
++          <label>
++            Enter Info Page ID:
++            <input type="text" name="infoId" required />
++          </label>
++          <button type="submit">Connect</button>
++        </form>
++      ) : (
++        <div>
++          <h2>Messages for Info ID: {infoId}</h2>
++          {isConnected ? (
++            <p>SSE connection active.</p>
++          ) : (
++            <p>Not connected.</p>
++          )}
++          <ul>
++            {messages.map((msg, index) => (
++              <li key={index}>{msg}</li>
++            ))}
++          </ul>
++        </div>
++      )}
++    </div>
++  );
++};
++
++export default InfoPage;
+diff --git a/frontend-react-sse/src/components/Toolbar.js b/frontend-react-sse/src/components/Toolbar.js
+new file mode 100644
+index 0000000..04760af
+--- /dev/null
++++ b/frontend-react-sse/src/components/Toolbar.js
+@@ -0,0 +1,72 @@
++import React, { useState } from 'react';
++import axios from 'axios';
++
++/**
++ * Toolbar component:
++ * - Allows the user to input a Toolbar ID and message text.
++ * - Sends the message via a REST API endpoint to the backend.
++ * - Contains detailed logs and error handling.
++ */
++const Toolbar = () => {
++  const [toolbarId, setToolbarId] = useState('');
++  const [messageText, setMessageText] = useState('');
++  const [status, setStatus] = useState('');
++
++  const sendMessage = async (e) => {
++    e.preventDefault();
++    console.log(\`[Toolbar] Attempting to send message with toolbarId: \${toolbarId}, message: \${messageText}\`);
++
++    if (!messageText.trim()) {
++      console.warn("[Toolbar] Message text is empty.");
++      setStatus("Message text cannot be empty.");
++      return;
++    }
++
++    try {
++      const response = await axios.post('http://localhost:5000/api/toolbar/send', {
++        id: toolbarId || 'default',
++        text: messageText,
++      });
++      console.log("[Toolbar] Message sent successfully. Server responded:", response.data);
++      setStatus(response.data);
++    } catch (error) {
++      console.error("[Toolbar] Error sending message:", error);
++      setStatus("Error sending the message.");
++    }
++  };
++
++  return (
++    <div>
++      <form onSubmit={sendMessage}>
++        <div>
++          <label>Toolbar ID:</label>
++          <input
++            type="text"
++            value={toolbarId}
++            onChange={(e) => {
++              console.log("[Toolbar] Toolbar ID changed to:", e.target.value);
++              setToolbarId(e.target.value);
++            }}
++            placeholder="Enter toolbar ID"
++          />
++        </div>
++        <div>
++          <label>Message:</label>
++          <input
++            type="text"
++            value={messageText}
++            onChange={(e) => {
++              console.log("[Toolbar] Message text changed to:", e.target.value);
++              setMessageText(e.target.value);
++            }}
++            placeholder="Type your message"
++          />
++        </div>
++        <button type="submit">Send</button>
++      </form>
++      {status && <p>Status: {status}</p>}
++    </div>
++  );
++};
++
++export default Toolbar;
+diff --git a/frontend-react-sse/src/index.js b/frontend-react-sse/src/index.js
+index d563c0f..53221f3 100644
+--- a/frontend-react-sse/src/index.js
++++ b/frontend-react-sse/src/index.js
+@@ -1,17 +1,14 @@
+ import React from 'react';
+-import ReactDOM from 'react-dom/client';
+-import './index.css';
++import ReactDOM from 'react-dom';
+ import App from './App';
+-import reportWebVitals from './reportWebVitals';
+ 
+-const root = ReactDOM.createRoot(document.getElementById('root'));
+-root.render(
++/**
++ * Renders the React application into the root DOM element.
++ * Logs the initial render event.
++ */
++ReactDOM.render(
+   <React.StrictMode>
+     <App />
+-  </React.StrictMode>
++  </React.StrictMode>,
++  document.getElementById('root')
+ );
+-
+-// If you want to start measuring performance in your app, pass a function
+-// to log results (for example: reportWebVitals(console.log))
+-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+-reportWebVitals();

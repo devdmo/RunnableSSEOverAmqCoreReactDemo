@@ -1,31 +1,24 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import InfoPage from './components/InfoPage';
-import Toolbar from './components/Toolbar';
+import logo from './logo.svg';
+import './App.css';
 
-/**
- * App component defines the main routes and navigation.
- * It logs application mounting.
- */
 function App() {
-  console.log("[App] Application mounted.");
   return (
-    <Router>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/info">Info Page</Link>
-          </li>
-          <li>
-            <Link to="/toolbar">Toolbar</Link>
-          </li>
-        </ul>
-      </nav>
-      <Routes>
-        <Route path="/info" element={<InfoPage />} />
-        <Route path="/toolbar" element={<Toolbar />} />
-      </Routes>
-    </Router>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
 }
 
