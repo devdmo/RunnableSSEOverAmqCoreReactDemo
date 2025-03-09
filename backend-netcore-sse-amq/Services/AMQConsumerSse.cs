@@ -36,14 +36,17 @@ namespace MyProject.Services
                 LoggerHelper.Debug($"Using JMS selector: {selector}");
                 using (var consumer = session.CreateConsumer(destination, selector))
                 {
-                    LoggerHelper.Info("Consumer created and listening for messages...");
+                    //improve this log says that this is no polling, that 
+                    LoggerHelper.Debug("Entering AMQConsumerSse.StartConsumerAsync loop.");                    
+                    
                     while (!cancellationToken.IsCancellationRequested)
                     {
-                        IMessage msg = consumer.Receive(TimeSpan.FromSeconds(1));
+                        // Waiting for a message for 10 seconds, not polling
+                        LoggerHelper.Debug("Misha this is no pooling we are going to wait for 10 seconds, and that we are not going to consume CPU in an async way, and loop will continue if no message is received");
+                        IMessage msg = consumer.Receive(TimeSpan.FromSeconds(10));
                         if (msg == null)
                         {
-                            LoggerHelper.Debug("No message received in this cycle; waiting...");
-                            await Task.Delay(500, cancellationToken);
+                            LoggerHelper.Debug("No message received in this cycle; continuing...");
                             continue;
                         }
                         if (msg is ITextMessage textMsg)
