@@ -1,0 +1,414 @@
+Script started on 2025-03-09 10:34:08-06:00 [TERM="xterm" TTY="/dev/pty1" COLUMNS="132" LINES="45"]
+[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ 
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ 
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ 
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ ls
+[?2004l20250309-102827-setup-process-cmd.out	20250309-103408-setup-process-p2.out   Backend
+20250309-102827-setup-process-cmd.time	20250309-103408-setup-process-p2.time  Frontend
+[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ cd [K[K[Kcd Frontend/
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend[0m
+$ ls
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend[0m
+$  [7mnpx create-react-app .[27m[C[C[Cnpx create-react-app .
+[?2004l[6n[6n[?9001h[?1004h[m[?25h[?9001l[?1004l[6n[?9001h[?1004h[m[?25h[?9001l[?1004l[6n[?9001h[?1004h[m[?25h]0;npm]0;npm exec create-react-app .⠙[K⠹[K⠸[K⠼[K⠴[KNeed to install the following packages:[K
+create-react-app@5.1.0
+Ok to proceed? (y)[1Cy
+
+⠙⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K[1mnpm[22m [33mwarn [94mdeprecated [minflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a
+[44;132Ha good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+⠸[1mnpm[22m [33mwarn [94mdeprecated [mfstream-ignore@1.0.5: This package is no longer supported.[K
+[1mnpm[22m [33mwarn [94mdeprecated [mrimraf@2.7.1: Rimraf versions prior to v4 are no longer supported[K
+[1mnpm[22m [33mwarn [94mdeprecated [muid-number@0.0.6: This package is no longer supported.[K
+⠼[1mnpm[22m [33mwarn [94mdeprecated [mglob@7.2.3: Glob versions prior to v9 are no longer supported[K
+⠼⠴[K[1mnpm[22m [33mwarn [94mdeprecated [mfstream@1.0.12: This package is no longer supported.[K
+⠴⠦[K⠧[K[1mnpm[22m [33mwarn [94mdeprecated [mtar@2.2.2: This version of tar is no longer supported, and will not receive security updates. Please upgrade asa
+[44;132Hap.
+⠧[K]0;C:\Windows\system32\cmd.exe [33m[1mcreate-react-app is deprecated.[m
+
+You can find a list of up-to-date React frameworks on react.dev
+For more info see:[4mhttps://react.dev/link/cra[24m[K
+
+[90mThis error message will only be shown once per install.[m
+[31mCannot create a project named [32m"Frontend" [31mbecause of npm naming restrictions:[m
+
+[31m  * name can no longer contain capital letters[m
+
+[31mPlease choose a different project name.[m
+[K[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend[0m
+$ #capitals are not permitted
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/Frontend[0m
+$ cd ..
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ ls
+[?2004l20250309-102827-setup-process-cmd.out	20250309-103408-setup-process-p2.out   Backend
+20250309-102827-setup-process-cmd.time	20250309-103408-setup-process-p2.time  Frontend
+[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ rm -rf Backend/
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ rm -rf Frontend/
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ stty size
+[?2004l45 132
+[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ [7mmkdir backend-netcore-sse-amq[27m[C[Cmkdir backend-netcore-sse-amq
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ mkdir [7mmkdir frontend-react-sse[27m[C[C[C[C[C[C[C[Cmkdir frontend-react-sse
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ ls
+[?2004l20250309-102827-setup-process-cmd.out	20250309-103408-setup-process-p2.out   backend-netcore-sse-amq	mkdir
+20250309-102827-setup-process-cmd.time	20250309-103408-setup-process-p2.time  frontend-react-sse
+[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ rmdir mkdir/
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ cd v[Kbackend-netcore-sse-amq/
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/backend-netcore-sse-amq
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/backend-netcore-sse-amq[0m
+$ ls
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/backend-netcore-sse-amq
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/backend-netcore-sse-amq[0m
+$ [7mdotnet new webapi --no-https -o .[27m[C[Cdotnet new webapi --no-https -o .
+[?2004l[6n[?9001h[?1004h[m[?25hThe template "ASP.NET Core Web API" was created successfully.
+
+Processing post-creation actions...
+Restoring C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\backend-netcore-sse-amq\backend-netcore-sse-amq.csproj:        
+]9;4;3;\[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l  csproj [103C (0.0s)
+[?25h[?25l[44;114H(0.1s)
+[?25h[?25l[44;114H(0.2s)
+[?25h[?25l[44;114H(0.2s)
+[?25h[?25l[44;114H(0.3s)
+[?25h[?25l[44;114H(0.3s)
+[?25h[?25l[44;114H(0.3s)
+[?25h[?25l[44;114H(0.4s)
+[?25h[?25l[44;114H(0.4s)
+[?25h[?25l[44;114H(0.5s)
+[?25h[?25l[44;114H(0.5s)
+[?25h[?25l[44;114H(0.6s)
+[?25h[?25l[44;114H(0.6s)
+[?25h[?25l[44;114H(0.7s)
+[?25h[?25l[44;114H(0.7s)
+[?25h[?25l[44;114H(0.8s)
+[?25h[?25l[44;114H(0.8s)
+[?25h[?25l[44;114H(0.9s)
+[?25h[?25l[44;1H[?25h]9;4;0;\Restore succeeded.[K
+[K
+
+[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/backend-netcore-sse-amq
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/backend-netcore-sse-amq[0m
+$ [?9001l[?1004l[7mdotnet add package Apache.NMS.ActiveMQ[27m[C[Cdotnet add package Apache.NMS.ActiveMQ
+[?2004l[6n[?9001h[?1004h[m[?25h]9;4;3;\[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l  backend-netcore-sse-amq [58C_LoadRestoreGraphEntryPoints (0.0s)
+[?25h[?25l[44;1H[K
+[K[44;1H[?25h[?25l[?25h[?25l  backend-netcore-sse-amq [60CProcessFrameworkReferences (0.0s)
+[?25h[?25l[44;114H(0.1s)
+[?25h[?25l[44;1H  backend-netcore-sse-amq                                                               CollectPackageReferences (0.1s)[K
+[?25h[?25l[44;1H[K
+[K[44;1H[?25h[?25l[K
+[K[44;1H[?25h[?25l  backend-netcore-sse-amq [62CGenerateRestoreGraphFile (0.1s)
+[?25h[?25l[44;114H(0.1s)
+[?25h[?25l[44;1H[K
+Build [32m[1msucceeded[m in 1.1s[K[?25h]9;4;0;\
+info : X.509 certificate chain validation will use the default trust store selected by .NET for code signing.
+info : X.509 certificate chain validation will use the default trust store selected by .NET for timestamping.
+info : Adding PackageReference for package 'Apache.NMS.ActiveMQ' into project 'C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReac
+[44;132HctDemo\backend-netcore-sse-amq\backend-netcore-sse-amq.csproj'.
+info :   GET https://api.nuget.org/v3/registration5-gz-semver2/apache.nms.activemq/index.json
+info :   OK https://api.nuget.org/v3/registration5-gz-semver2/apache.nms.activemq/index.json 79ms
+info : Restoring packages for C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\backend-netcore-sse-amq\backend-netcore-sse
+[44;132He-amq.csproj...
+info :   GET https://api.nuget.org/v3/vulnerabilities/index.json
+info :   OK https://api.nuget.org/v3/vulnerabilities/index.json 123ms
+info :   GET https://api.nuget.org/v3-vulnerabilities/2025.03.07.17.36.10/vulnerability.base.json
+info :   GET https://api.nuget.org/v3-vulnerabilities/2025.03.07.17.36.10/2025.03.09.17.36.15/vulnerability.update.json
+info :   OK https://api.nuget.org/v3-vulnerabilities/2025.03.07.17.36.10/vulnerability.base.json 72ms
+info :   OK https://api.nuget.org/v3-vulnerabilities/2025.03.07.17.36.10/2025.03.09.17.36.15/vulnerability.update.json 133ms
+info : Package 'Apache.NMS.ActiveMQ' is compatible with all the specified frameworks in project 'C:\Short\sevil\rinzler\acf\Runnable
+[44;132HeSSEOverAmqCoreReactDemo\backend-netcore-sse-amq\backend-netcore-sse-amq.csproj'.
+info : PackageReference for package 'Apache.NMS.ActiveMQ' version '2.1.1' added to file 'C:\Short\sevil\rinzler\acf\RunnableSSEOverA
+[44;132HAmqCoreReactDemo\backend-netcore-sse-amq\backend-netcore-sse-amq.csproj'.
+info : Writing assets file to disk. Path: C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\backend-netcore-sse-amq\obj\pro
+[44;132Hoject.assets.json
+log  : Restored C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\backend-netcore-sse-amq\backend-netcore-sse-amq.csproj (i
+[44;132Hin 527 ms).
+[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/backend-netcore-sse-amq
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/backend-netcore-sse-amq[0m
+$ [7mdotnet add package Newtonsoft.Json[27m[C[Cdotnet add package Newtonsoft.Json
+[?2004l[6n[?9001h[?1004h[m[?25h]9;4;3;\[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l[?25h[?25l  backend-netcore-sse-amq [50C_FilterRestoreGraphProjectInputItems (0.0s)
+[?25h[?25l[44;1H[K
+[K[44;1H[?25h[?25l[?25h[?25l  backend-netcore-sse-amq [60CProcessFrameworkReferences (0.0s)
+[?25h[?25l[44;114H(0.1s)
+[?25h[?25l[44;1H  backend-netcore-sse-amq                                                                    _GetRestoreSettings (0.1s)[K
+[?25h[?25l[44;1H[K
+[K[44;1H[?25h[?25l  backend-netcore-sse-amq [62CGenerateRestoreGraphFile (0.1s)
+[?25h[?25l[44;114H(0.1s)
+[?25h[?25l[44;1H[K
+Build [32m[1msucceeded[m in 1.1s[K[?25h]9;4;0;\
+info : X.509 certificate chain validation will use the default trust store selected by .NET for code signing.
+info : X.509 certificate chain validation will use the default trust store selected by .NET for timestamping.
+info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDem
+[44;132Hmo\backend-netcore-sse-amq\backend-netcore-sse-amq.csproj'.
+info :   GET https://api.nuget.org/v3/registration5-gz-semver2/newtonsoft.json/index.json
+info :   OK https://api.nuget.org/v3/registration5-gz-semver2/newtonsoft.json/index.json 363ms
+info : Restoring packages for C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\backend-netcore-sse-amq\backend-netcore-sse
+[44;132He-amq.csproj...
+info :   CACHE https://api.nuget.org/v3/vulnerabilities/index.json
+info :   CACHE https://api.nuget.org/v3-vulnerabilities/2025.03.07.17.36.10/vulnerability.base.json
+info :   CACHE https://api.nuget.org/v3-vulnerabilities/2025.03.07.17.36.10/2025.03.09.17.36.15/vulnerability.update.json
+info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks in project 'C:\Short\sevil\rinzler\acf\RunnableSSEO
+[44;132HOverAmqCoreReactDemo\backend-netcore-sse-amq\backend-netcore-sse-amq.csproj'.
+info : PackageReference for package 'Newtonsoft.Json' version '13.0.3' added to file 'C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqC
+[44;132HCoreReactDemo\backend-netcore-sse-amq\backend-netcore-sse-amq.csproj'.
+info : Writing assets file to disk. Path: C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\backend-netcore-sse-amq\obj\pro
+[44;132Hoject.assets.json
+log  : Restored C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\backend-netcore-sse-amq\backend-netcore-sse-amq.csproj (i
+[44;132Hin 286 ms).
+[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/backend-netcore-sse-amq
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/backend-netcore-sse-amq[0m
+$ cd ..
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ ls
+[?2004l20250309-102827-setup-process-cmd.out	20250309-103408-setup-process-p2.out   backend-netcore-sse-amq
+20250309-102827-setup-process-cmd.time	20250309-103408-setup-process-p2.time  frontend-react-sse
+[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ cd frontend-react-sse/
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/frontend-react-sse
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/frontend-react-sse[0m
+$ [7mnpx create-react-app .[27m[C[Cnpx create-react-app .
+[?2004l[6n[?9001h[?1004h[m[?25h[?9001l[?1004l[6n[?9001h[?1004h[m[?25h[?9001l[?1004l[6n[?9001h[?1004h[m[?25h]0;npm]0;npm exec create-react-app .⠙[K⠹[K⠸[K⠼[K⠴[KNeed to install the following packages:[K
+create-react-app@5.1.0
+Ok to proceed? (y)[1Cy
+
+⠙⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K[K]0;C:\Windows\system32\cmd.exe 
+Creating a new React app in [32mC:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\frontend-react-sse[m.
+
+]0;npm]0;npm config list]0;npmInstalling packages. This might take a couple of minutes.
+Installing [36mreact[m, [36mreact-dom[m, and [36mreact-scripts [mwith [36mcra-template[m...
+
+]0;npm install react react-dom react-scripts cra-template⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K[K⠼⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K[K
+added 1325 packages in 60s
+⠼[K
+268 packages are looking for funding
+  run `npm fund` for details
+
+Installing template dependencies using npm...
+]0;npm]0;npm install @testing-library/dom@^10.4.0 @testing-library/jest-dom@^6.6.3 @testing-library/react@^16.1.0 @testing-library/user-event@^13.2.1 web-vitals@^2.1.0⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K[K
+added 18 packages, and changed 1 package in 6s
+
+268 packages are looking for funding
+  run `npm fund` for details
+⠦[KRemoving template package using npm...
+
+]0;npm]0;npm uninstall cra-template⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K[K
+removed 1 package, and audited 1343 packages in 4s
+
+268 packages are looking for funding
+  run `npm fund` for details
+⠹[K
+[31m[1m12[m vulnerabilities (6 [33m[1mmoderate[m, 6 [31m[1mhigh[m)[K
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+Success! Created frontend-react-sse at C:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\frontend-react-sse
+Inside that directory, you can run several commands:
+
+[36m  npm start[m
+    Starts the development server.
+
+[36m  npm run build[m
+    Bundles the app into static files for production.
+
+[36m  npm test[m
+    Starts the test runner.
+
+[36m  npm run eject[m
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+[36m  cd [mC:\Short\sevil\rinzler\acf\RunnableSSEOverAmqCoreReactDemo\frontend-react-sse[K
+  [36mnpm start[K[m
+
+Happy hacking!
+[K[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/frontend-react-sse
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/frontend-react-sse[0m
+$ npx create-react-app .[C[C[K[7mnpm install axios react-router-dom[27m[C[Cnpm install axios react-router-dom
+[?2004l[6n[?9001h[?1004h[m[?25h[?9001l[?1004l[6n[?9001h[?1004h[m[?25h[?9001l[?1004l[6n[?9001h[?1004h[m[?25h]0;npm]0;npm install axios react-router-dom⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K⠇[K⠏[K⠋[K⠙[K⠹[K⠸[K⠼[K⠴[K⠦[K⠧[K[K
+added 9 packages, and audited 1352 packages in 5s
+
+268 packages are looking for funding
+  run `npm fund` for details
+⠇[K
+[31m[1m12[m vulnerabilities (6 [33m[1mmoderate[m, 6 [31m[1mhigh[m)[K
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/frontend-react-sse
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo/frontend-react-sse[0m
+$ cd ..
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ git status
+[?2004l[6n[?9001h[?1004h[m[?25hOn branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        [31m.gitignore[K[m
+        [31m20250309-102827-setup-process-cmd.out[K[m
+        [31m20250309-102827-setup-process-cmd.time[K[m
+        [31m20250309-103408-setup-process-p2.out[K[m
+        [31m20250309-103408-setup-process-p2.time[K[m
+        [31mbackend-netcore-sse-amq/[K[m
+        [31mfrontend-react-sse/[K[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ git add .
+[?2004l[6n[?9001h[?1004h[m[?25hwarning: in the working copy of 'backend-netcore-sse-amq/Program.cs', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'backend-netcore-sse-amq/Properties/launchSettings.json', CRLF will be replaced by LF the next time 
+[44;132H Git touches it
+warning: in the working copy of 'backend-netcore-sse-amq/appsettings.Development.json', CRLF will be replaced by LF the next time Gi
+[44;132Hit touches it
+warning: in the working copy of 'backend-netcore-sse-amq/appsettings.json', CRLF will be replaced by LF the next time Git touches it[45;132H
+warning: in the working copy of 'backend-netcore-sse-amq/backend-netcore-sse-amq.csproj', CRLF will be replaced by LF the next time 
+[44;132H Git touches it
+warning: in the working copy of 'backend-netcore-sse-amq/backend-netcore-sse-amq.http', CRLF will be replaced by LF the next time Gi
+[44;132Hit touches it
+[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ git status
+[?2004l[6n[?9001h[?1004h[m[?25hOn branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        [32mnew file:   .gitignore[K[m
+        [32mnew file:   20250309-102827-setup-process-cmd.out[K[m
+        [32mnew file:   20250309-102827-setup-process-cmd.time[K[m
+        [32mnew file:   20250309-103408-setup-process-p2.out[K[m
+        [32mnew file:   20250309-103408-setup-process-p2.time[K[m
+        [32mnew file:   backend-netcore-sse-amq/Program.cs[K[m
+        [32mnew file:   backend-netcore-sse-amq/Properties/launchSettings.json[K[m
+        [32mnew file:   backend-netcore-sse-amq/appsettings.Development.json[K[m
+        [32mnew file:   backend-netcore-sse-amq/appsettings.json[K[m
+        [32mnew file:   backend-netcore-sse-amq/backend-netcore-sse-amq.csproj[K[m
+        [32mnew file:   backend-netcore-sse-amq/backend-netcore-sse-amq.http[K[m
+        [32mnew file:   frontend-react-sse/.gitignore[K[m
+        [32mnew file:   frontend-react-sse/README.md[K[m
+        [32mnew file:   frontend-react-sse/package-lock.json[K[m
+        [32mnew file:   frontend-react-sse/package.json[K[m
+        [32mnew file:   frontend-react-sse/public/favicon.ico[K[m
+        [32mnew file:   frontend-react-sse/public/index.html[K[m
+        [32mnew file:   frontend-react-sse/public/logo192.png[K[m
+        [32mnew file:   frontend-react-sse/public/logo512.png[K[m
+        [32mnew file:   frontend-react-sse/public/manifest.json[K[m
+        [32mnew file:   frontend-react-sse/public/robots.txt[K[m
+        [32mnew file:   frontend-react-sse/src/App.css[K[m
+        [32mnew file:   frontend-react-sse/src/App.js[K[m
+        [32mnew file:   frontend-react-sse/src/App.test.js[K[m
+        [32mnew file:   frontend-react-sse/src/index.css[K[m
+        [32mnew file:   frontend-react-sse/src/index.js[K[m
+        [32mnew file:   frontend-react-sse/src/logo.svg[K[m
+        [32mnew file:   frontend-react-sse/src/reportWebVitals.js[K[m
+        [32mnew file:   frontend-react-sse/src/setupTests.js[K[m
+
+[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ git commit -a -m "initial files"
+[?2004l[6n[?9001h[?1004h[m[?25h[main (root-commit) 68995cb] initial files
+ 29 files changed, 18659 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 20250309-102827-setup-process-cmd.out
+ create mode 100644 20250309-102827-setup-process-cmd.time
+ create mode 100644 20250309-103408-setup-process-p2.out
+ create mode 100644 20250309-103408-setup-process-p2.time
+ create mode 100644 backend-netcore-sse-amq/Program.cs
+ create mode 100644 backend-netcore-sse-amq/Properties/launchSettings.json
+ create mode 100644 backend-netcore-sse-amq/appsettings.Development.json
+ create mode 100644 backend-netcore-sse-amq/appsettings.json
+ create mode 100644 backend-netcore-sse-amq/backend-netcore-sse-amq.csproj
+ create mode 100644 backend-netcore-sse-amq/backend-netcore-sse-amq.http
+ create mode 100644 frontend-react-sse/.gitignore
+ create mode 100644 frontend-react-sse/README.md
+ create mode 100644 frontend-react-sse/package-lock.json
+ create mode 100644 frontend-react-sse/package.json
+ create mode 100644 frontend-react-sse/public/favicon.ico
+ create mode 100644 frontend-react-sse/public/index.html
+ create mode 100644 frontend-react-sse/public/logo192.png
+ create mode 100644 frontend-react-sse/public/logo512.png
+ create mode 100644 frontend-react-sse/public/manifest.json
+ create mode 100644 frontend-react-sse/public/robots.txt
+ create mode 100644 frontend-react-sse/src/App.css
+ create mode 100644 frontend-react-sse/src/App.js
+ create mode 100644 frontend-react-sse/src/App.test.js
+ create mode 100644 frontend-react-sse/src/index.css
+ create mode 100644 frontend-react-sse/src/index.js
+ create mode 100644 frontend-react-sse/src/logo.svg
+ create mode 100644 frontend-react-sse/src/reportWebVitals.js
+ create mode 100644 frontend-react-sse/src/setupTests.js
+[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ git push
+[?2004l[6n[?9001h[?1004h[m[?25hEnumerating objects: 35, done.
+Counting objects: 100% (35/35), done.
+Delta compression using up to 24 threads
+Compressing objects:  51% (17/33)Compressing objects: 100% (33/33), done.
+Writing objects:  37% (13/35)Writing objects:  48% (17/35)Writing objects:  60% (21/35)Writing objects: 100% (35/35), 181.87 KiB | 3.87 MiB/s, done.
+Total 35 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1), done.[K
+To https://github.com/devdmo/RunnableSSEOverAmqCoreReactDemo
+ * [new branch]      main -> main
+[?9001l[?1004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ vim generate-project.sh
+[?2004lTaglist: Exuberant ctags (http://ctags.sf.net) not found in PATH. Plugin is not loaded.[?25l[J
+Press ENTER or type command to continue[?25h[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;45r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[45;1H"generate-project.sh" [New][2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[2;1H[1m[34m~                                                                                                                                   [3;1H~                                                                                                                                   [4;1H~                                                                                                                                   [5;1H~                                                                                                                                   [6;1H~                                                                                                                                   [7;1H~                                                                                                                                   [8;1H~                                                                                                                                   [9;1H~                                                                                                                                   [10;1H~                                                                                                                                   [11;1H~                                                                                                                                   [12;1H~                                                                                                                                   [13;1H~                                                                                                                                   [14;1H~                                                                                                                                   [15;1H~                                                                                                                                   [16;1H~                                                                                                                                   [17;1H~                                                                                                                                   [18;1H~                                                                                                                                   [19;1H~                                                                                                                                   [20;1H~                                                                                                                                   [21;1H~                                                                                                                                   [22;1H~                                                                                                                                   [23;1H~                                                                                                                                   [24;1H~                                                                                                                                   [25;1H~                                                                                                                                   [26;1H~                                                                                                                                   [27;1H~                                                                                                                                   [28;1H~                                                                                                                                   [29;1H~                                                                                                                                   [30;1H~                                                                                                                                   [31;1H~                                                                                                                                   [32;1H~                                                                                                                                   [33;1H~                                                                                                                                   [34;1H~                                                                                                                                   [35;1H~                                                                                                                                   [36;1H~                                                                                                                                   [37;1H~                                                                                                                                   [38;1H~                                                                                                                                   [39;1H~                                                                                                                                   [40;1H~                                                                                                                                   [41;1H~                                                                                                                                   [42;1H~                                                                                                                                   [43;1H~                                                                                                                                   [44;1H~                                                                                                                                   [m[45;115H0,0-1[9CAll[1;1H[?25h[?4m[?12$p[27m[23m[29m[m[H[2J[?25l[2;1H[1m[34m~                                                                                                                                   [3;1H~                                                                                                                                   [4;1H~                                                                                                                                   [5;1H~                                                                                                                                   [6;1H~                                                                                                                                   [7;1H~                                                                                                                                   [8;1H~                                                                                                                                   [9;1H~                                                                                                                                   [10;1H~                                                                                                                                   [11;1H~                                                                                                                                   [12;1H~                                                                                                                                   [13;1H~                                                                                                                                   [14;1H~                                                                                                                                   [15;1H~                                                                                                                                   [16;1H~                                                                                                                                   [17;1H~                                                                                                                                   [18;1H~                                                                                                                                   [19;1H~                                                                                                                                   [20;1H~                                                                                                                                   [21;1H~                                                                                                                                   [22;1H~                                                                                                                                   [23;1H~                                                                                                                                   [24;1H~                                                                                                                                   [25;1H~                                                                                                                                   [26;1H~                                                                                                                                   [27;1H~                                                                                                                                   [28;1H~                                                                                                                                   [29;1H~                                                                                                                                   [30;1H~                                                                                                                                   [31;1H~                                                                                                                                   [32;1H~                                                                                                                                   [33;1H~                                                                                                                                   [34;1H~                                                                                                                                   [35;1H~                                                                                                                                   [36;1H~                                                                                                                                   [37;1H~                                                                                                                                   [38;1H~                                                                                                                                   [39;1H~                                                                                                                                   [40;1H~                                                                                                                                   [41;1H~                                                                                                                                   [42;1H~                                                                                                                                   [43;1H~                                                                                                                                   [44;1H~                                                                                                                                   [m[45;115H0,0-1[9CAll"generate-project.sh" [New][1;1H[?25h[?25l[45;1H[K[45;1H:[?25hq![?25l[?2004l[>4;m[23;2t[23;1t[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m
+[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ 
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ 
+[?2004l[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ ls
+[?2004l20250309-102827-setup-process-cmd.out	20250309-103408-setup-process-p2.out   backend-netcore-sse-amq
+20250309-102827-setup-process-cmd.time	20250309-103408-setup-process-p2.time  frontend-react-sse
+[?2004h]0;/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo
+[32mwizar@eviltufa14 [33m/short/sevil/rinzler/acf/RunnableSSEOverAmqCoreReactDemo[0m
+$ exit
+[?2004lexit
+
+Script done on 2025-03-09 12:01:29-06:00 [COMMAND_EXIT_CODE="0"]
