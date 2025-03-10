@@ -18,7 +18,7 @@ const InfoPage = () => {
     }
 
     console.log(`[InfoPage] Starting SSE connection for Info ID: ${infoId}`);
-    const eventSource = new EventSource(`http://localhost:5000/api/info/stream?id=${infoId}`);
+    const eventSource = new EventSource(`http://localhost:5262/api/info/stream?id=${infoId}`);
 
     eventSource.onopen = () => {
       console.log("[InfoPage] SSE connection established.");

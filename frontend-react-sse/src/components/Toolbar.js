@@ -23,7 +23,7 @@ const Toolbar = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/toolbar/send', {
+      const response = await axios.post('http://localhost:5262/api/toolbar/send', {
         id: toolbarId || 'default',
         text: messageText,
       });
