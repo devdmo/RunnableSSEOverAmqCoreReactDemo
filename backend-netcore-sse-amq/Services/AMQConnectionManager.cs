@@ -1,23 +1,23 @@
 using Apache.NMS;
-using Apache.NMS.ActiveMQ;
+using Apache.NMS.AMQP; // Updated to use AMQP
 using System;
 
 namespace MyProject.Services
 {
     /// <summary>
-    /// AMQConnectionManager handles the creation and retrieval of a shared ActiveMQ connection.
+    /// AMQConnectionManager handles the creation and retrieval of a shared AMQP connection.
     /// This ensures a single connection is used across the application.
     /// </summary>
     public class AMQConnectionManager
     {
-        private readonly string brokerUri = "tcp://localhost:61616";
-        private readonly string userName = "admin";
-        private readonly string password = "admin";
+        private readonly string brokerUri = "amqp://localhost:5672/info-broker"; // Updated for info-broker
+        private readonly string userName = "admin"; // Ensure this matches the broker's username
+        private readonly string password = "admin"; // Ensure this matches the broker's password
         private IConnection _connection;
         private readonly object _lock = new object();
 
         /// <summary>
-        /// Returns a shared ActiveMQ connection, creating one if necessary.
+        /// Returns a shared AMQP connection, creating one if necessary.
         /// </summary>
         public IConnection GetConnection()
         {
@@ -30,15 +30,15 @@ namespace MyProject.Services
                     {
                         try
                         {
-                            LoggerHelper.Info("Creating new ActiveMQ connection...");
-                            var factory = new ConnectionFactory(brokerUri);
+                            LoggerHelper.Info("Creating new AMQP connection...");
+                            var factory = new NmsConnectionFactory(brokerUri); // Updated factory for AMQP
                             _connection = factory.CreateConnection(userName, password);
                             _connection.Start();
-                            LoggerHelper.Info("ActiveMQ connection successfully established.");
+                            LoggerHelper.Info("AMQP connection successfully established.");
                         }
                         catch (Exception ex)
                         {
-                            LoggerHelper.Fatal("Failed to create ActiveMQ connection.", ex);
+                            LoggerHelper.Fatal("Failed to create AMQP connection.", ex);
                             throw;
                         }
                     }

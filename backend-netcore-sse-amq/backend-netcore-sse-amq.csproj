@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Apache.NMS.ActiveMQ" Version="2.1.1" />
+    <PackageReference Include="Apache.NMS.AMQP" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
