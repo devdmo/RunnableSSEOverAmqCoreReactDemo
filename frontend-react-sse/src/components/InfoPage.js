@@ -17,28 +17,45 @@ const InfoPage = () => {
       return;
     }
 
-    console.log(`[InfoPage] Starting SSE connection for Info ID: ${infoId}`);
-    const eventSource = new EventSource(`http://localhost:5262/api/info/stream?id=${infoId}`);
+    let retryTimeout = 1000; // Initial retry delay in milliseconds
+    let eventSource;
 
-    eventSource.onopen = () => {
-      console.log("[InfoPage] SSE connection established.");
-      setIsConnected(true);
+    const connectToSSE = () => {
+      console.log(`[InfoPage] Starting SSE connection for Info ID: ${infoId}`);
+      eventSource = new EventSource(`http://localhost:5262/api/info/stream?id=${infoId}`);
+
+      eventSource.onopen = () => {
+        console.log("[InfoPage] SSE connection established.");
+        setIsConnected(true);
+        retryTimeout = 1000; // Reset retry delay on successful connection
+      };
+
+      eventSource.onmessage = (e) => {
+        console.log("[InfoPage] Message received:", e.data);
+        setMessages((prev) => [...prev, e.data]);
+      };
+
+      eventSource.onerror = (err) => {
+        console.error("[InfoPage] Error in SSE connection:", err);
+        setIsConnected(false);
+        eventSource.close();
+
+        // Retry connection with exponential backoff
+        console.log(`[InfoPage] Retrying connection in ${retryTimeout / 1000} seconds...`);
+        setTimeout(() => {
+          retryTimeout = Math.min(retryTimeout * 2, 30000); // Cap retry delay at 30 seconds
+          connectToSSE();
+        }, retryTimeout);
+      };
     };
 
-    eventSource.onmessage = (e) => {
-      console.log("[InfoPage] Message received:", e.data);
-      setMessages((prev) => [...prev, e.data]);
-    };
-
-    eventSource.onerror = (err) => {
-      console.error("[InfoPage] Error in SSE connection:", err);
-      eventSource.close();
-      setIsConnected(false);
-    };
+    connectToSSE();
 
     return () => {
       console.log("[InfoPage] Closing SSE connection.");
-      eventSource.close();
+      if (eventSource) {
+        eventSource.close();
+      }
     };
   }, [infoId]);
 
