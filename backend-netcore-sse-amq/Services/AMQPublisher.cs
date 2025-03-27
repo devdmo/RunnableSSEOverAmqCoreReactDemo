@@ -48,7 +48,9 @@ namespace MyProject.Services
                         ITextMessage message = session.CreateTextMessage(json);
                         message.Properties.SetString("id", infoId);
                         LoggerHelper.Debug($"Set JMS property 'id' to: {infoId}");
-                        producer.Send(message);
+                        // Set expiration time for the message.
+                        TimeSpan expiration = TimeSpan.FromSeconds(30);
+                        producer.Send(message, MsgDeliveryMode.Persistent, MsgPriority.Normal, expiration);
                         LoggerHelper.Info("Message published successfully to ActiveMQ.");
                     }
                 }

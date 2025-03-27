@@ -6,6 +6,13 @@ import React, { useState, useEffect } from 'react';
  * - Connects to the backend SSE endpoint to receive real-time messages.
  * - Contains detailed logs for every major step.
  */
+
+// Centralized configuration for SSE connection
+const SSE_CONFIG = {
+  initialRetryTimeout: 1000, // Initial retry delay in milliseconds
+  maxRetryTimeout: 30000,   // Maximum retry delay in milliseconds
+};
+
 const InfoPage = () => {
   const [messages, setMessages] = useState([]);
   const [infoId, setInfoId] = useState('');
@@ -17,7 +24,7 @@ const InfoPage = () => {
       return;
     }
 
-    let retryTimeout = 1000; // Initial retry delay in milliseconds
+    let retryTimeout = SSE_CONFIG.initialRetryTimeout;
     let eventSource;
 
     const connectToSSE = () => {
@@ -27,7 +34,7 @@ const InfoPage = () => {
       eventSource.onopen = () => {
         console.log("[InfoPage] SSE connection established.");
         setIsConnected(true);
-        retryTimeout = 1000; // Reset retry delay on successful connection
+        retryTimeout = SSE_CONFIG.initialRetryTimeout; // Reset retry delay on successful connection
       };
 
       eventSource.onmessage = (e) => {
@@ -43,7 +50,7 @@ const InfoPage = () => {
         // Retry connection with exponential backoff
         console.log(`[InfoPage] Retrying connection in ${retryTimeout / 1000} seconds...`);
         setTimeout(() => {
-          retryTimeout = Math.min(retryTimeout * 2, 30000); // Cap retry delay at 30 seconds
+          retryTimeout = Math.min(retryTimeout * 2, SSE_CONFIG.maxRetryTimeout);
           connectToSSE();
         }, retryTimeout);
       };
