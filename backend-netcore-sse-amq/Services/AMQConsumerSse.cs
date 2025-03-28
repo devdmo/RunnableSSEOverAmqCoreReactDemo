@@ -29,30 +29,27 @@ namespace MyProject.Services
         {
             LoggerHelper.Debug($"Starting AMQConsumerSse for infoId: {infoId}");
             var connection = _connectionManager.GetConnection();
-            using (var session = connection.CreateSession(AcknowledgementMode.Transactional))
+            using (var personalSession = connection.CreateSession(AcknowledgementMode.Transactional))
+            using (var broadcastSession = connection.CreateSession(AcknowledgementMode.Transactional))
             {
                 // Personal messages consumer from queue with selector for this infoId
-                IDestination personalDestination = session.GetQueue(queueName);
+                IDestination personalDestination = personalSession.GetQueue(queueName);
                 string personalSelector = $"id = '{infoId}'";
                 LoggerHelper.Debug($"Using JMS selector: {personalSelector}");
-                using (var personalConsumer = session.CreateConsumer(personalDestination, personalSelector))
+                using (var personalConsumer = personalSession.CreateConsumer(personalDestination, personalSelector))
                 // Broadcast consumer from topic (all subscribers receive these)
-                using (var broadcastConsumer = session.CreateConsumer(session.GetTopic("MyBroadcastTopic")))
+                using (var broadcastConsumer = broadcastSession.CreateConsumer(broadcastSession.GetTopic("MyBroadcastTopic")))
                 {
                     LoggerHelper.Debug("Entering AMQConsumerSse.StartConsumerAsync loop.");
                     
-                    // Create two tasks for personal and broadcast consumers.
                     var personalTask = Task.Run(async () =>
                     {
                         while (!cancellationToken.IsCancellationRequested)
                         {
                             LoggerHelper.Debug("Waiting for personal message...");
                             IMessage msg = personalConsumer.Receive(TimeSpan.FromSeconds(10));
-                            if (msg == null)
-                            {
-                                continue;
-                            }
-                            await ProcessMessageAsync(msg, response, session, cancellationToken);
+                            if (msg == null) continue;
+                            await ProcessMessageAsync(msg, response, personalSession, cancellationToken);
                         }
                     }, cancellationToken);
                     
@@ -62,11 +59,8 @@ namespace MyProject.Services
                         {
                             LoggerHelper.Debug("Waiting for broadcast message...");
                             IMessage msg = broadcastConsumer.Receive(TimeSpan.FromSeconds(10));
-                            if (msg == null)
-                            {
-                                continue;
-                            }
-                            await ProcessMessageAsync(msg, response, session, cancellationToken);
+                            if (msg == null) continue;
+                            await ProcessMessageAsync(msg, response, broadcastSession, cancellationToken);
                         }
                     }, cancellationToken);
                     
@@ -76,7 +70,7 @@ namespace MyProject.Services
             LoggerHelper.Info("Exiting AMQConsumerSse.StartConsumerAsync loop.");
         }
 
-        private async Task ProcessMessageAsync(IMessage msg, HttpResponse response, ISession session, CancellationToken cancellationToken)
+        private async Task ProcessMessageAsync(IMessage msg, HttpResponse response, Apache.NMS.ISession session, CancellationToken cancellationToken)
         {
             if (msg is ITextMessage textMsg)
             {
