@@ -32,7 +32,8 @@ namespace MyProject.Services
             using (var session = connection.CreateSession(AcknowledgementMode.Transactional))
             {
                 IDestination destination = session.GetQueue(queueName);
-                string selector = $"id = '{infoId}'";
+                // Update selector to also listen for broadcast messages
+                string selector = $"id = '{infoId}' OR id = 'broadcast'";
                 LoggerHelper.Debug($"Using JMS selector: {selector}");
                 using (var consumer = session.CreateConsumer(destination, selector))
                 {

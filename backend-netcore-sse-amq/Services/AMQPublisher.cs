@@ -42,6 +42,11 @@ namespace MyProject.Services
                     using (var producer = session.CreateProducer(destination))
                     {
                         LoggerHelper.Info($"Producer created for queue: {queueName}");
+                        // Optional: log if message is broadcast type.
+                        if (infoId == "broadcast")
+                        {
+                            LoggerHelper.Info("Publishing broadcast message.");
+                        }
                         var payload = new { id = infoId, text = messageText };
                         string json = JsonConvert.SerializeObject(payload);
                         LoggerHelper.Debug($"Serialized payload: {json}");

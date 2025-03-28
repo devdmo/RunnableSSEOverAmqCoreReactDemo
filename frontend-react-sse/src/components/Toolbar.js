@@ -11,10 +11,11 @@ const Toolbar = () => {
   const [toolbarId, setToolbarId] = useState('');
   const [messageText, setMessageText] = useState('');
   const [status, setStatus] = useState('');
+  const [broadcast, setBroadcast] = useState(false); // new state for broadcast
 
   const sendMessage = async (e) => {
     e.preventDefault();
-    console.log(`[Toolbar] Attempting to send message with toolbarId: ${toolbarId}, message: ${messageText}`);
+    console.log(`[Toolbar] Attempting to send message with toolbarId: ${toolbarId}, message: ${messageText}, broadcast: ${broadcast}`);
 
     if (!messageText.trim()) {
       console.warn("[Toolbar] Message text is empty.");
@@ -23,10 +24,11 @@ const Toolbar = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5262/api/toolbar/send', {
-        id: toolbarId || 'default',
+      const payload = {
+        id: broadcast ? "broadcast" : (toolbarId || 'default'),
         text: messageText,
-      });
+      };
+      const response = await axios.post('http://localhost:5262/api/toolbar/send', payload);
       console.log("[Toolbar] Message sent successfully. Server responded:", response.data);
       setStatus(response.data);
     } catch (error) {
@@ -48,6 +50,7 @@ const Toolbar = () => {
               setToolbarId(e.target.value);
             }}
             placeholder="Enter toolbar ID"
+            disabled={broadcast} // optionally disable when broadcasting
           />
         </div>
         <div>
@@ -61,6 +64,19 @@ const Toolbar = () => {
             }}
             placeholder="Type your message"
           />
+        </div>
+        <div>
+          <label>
+            <input
+              type="checkbox"
+              checked={broadcast}
+              onChange={(e) => {
+                console.log("[Toolbar] Broadcast checkbox changed to:", e.target.checked);
+                setBroadcast(e.target.checked);
+              }}
+            />
+            Send as broadcast
+          </label>
         </div>
         <button type="submit">Send</button>
       </form>
