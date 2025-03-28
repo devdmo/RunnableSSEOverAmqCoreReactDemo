@@ -5,7 +5,7 @@ using System;
 namespace MyProject.Services
 {
     /// <summary>
-    /// AMQPublisher publishes messages to the ActiveMQ queue.
+    /// AMQPublisher publishes messages to the ActiveMQ queue or topic.
     /// It serializes the payload to JSON and sets the JMS property "id" for filtering.
     /// </summary>
     public class AMQPublisher
@@ -38,15 +38,22 @@ namespace MyProject.Services
                 using (var session = connection.CreateSession(AcknowledgementMode.AutoAcknowledge))
                 {
                     LoggerHelper.Debug("ActiveMQ session created for publishing.");
-                    IDestination destination = session.GetQueue(queueName);
+
+                    // Determine destination: if broadcast, use topic; otherwise use queue.
+                    IDestination destination;
+                    if (infoId == "broadcast")
+                    {
+                        LoggerHelper.Info("Publishing broadcast message.");
+                        destination = session.GetTopic("MyBroadcastTopic");
+                    }
+                    else
+                    {
+                        destination = session.GetQueue(queueName);
+                    }
+
                     using (var producer = session.CreateProducer(destination))
                     {
-                        LoggerHelper.Info($"Producer created for queue: {queueName}");
-                        // Optional: log if message is broadcast type.
-                        if (infoId == "broadcast")
-                        {
-                            LoggerHelper.Info("Publishing broadcast message.");
-                        }
+                        LoggerHelper.Info($"Producer created for destination: {(infoId == "broadcast" ? "MyBroadcastTopic" : queueName)}");
                         var payload = new { id = infoId, text = messageText };
                         string json = JsonConvert.SerializeObject(payload);
                         LoggerHelper.Debug($"Serialized payload: {json}");

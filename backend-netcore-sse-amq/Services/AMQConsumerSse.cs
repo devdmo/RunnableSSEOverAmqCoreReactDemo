@@ -31,46 +31,70 @@ namespace MyProject.Services
             var connection = _connectionManager.GetConnection();
             using (var session = connection.CreateSession(AcknowledgementMode.Transactional))
             {
-                IDestination destination = session.GetQueue(queueName);
-                // Update selector to also listen for broadcast messages
-                string selector = $"id = '{infoId}' OR id = 'broadcast'";
-                LoggerHelper.Debug($"Using JMS selector: {selector}");
-                using (var consumer = session.CreateConsumer(destination, selector))
+                // Personal messages consumer from queue with selector for this infoId
+                IDestination personalDestination = session.GetQueue(queueName);
+                string personalSelector = $"id = '{infoId}'";
+                LoggerHelper.Debug($"Using JMS selector: {personalSelector}");
+                using (var personalConsumer = session.CreateConsumer(personalDestination, personalSelector))
+                // Broadcast consumer from topic (all subscribers receive these)
+                using (var broadcastConsumer = session.CreateConsumer(session.GetTopic("MyBroadcastTopic")))
                 {
-                    //improve this log says that this is no polling, that 
-                    LoggerHelper.Debug("Entering AMQConsumerSse.StartConsumerAsync loop.");                    
+                    LoggerHelper.Debug("Entering AMQConsumerSse.StartConsumerAsync loop.");
                     
-                    while (!cancellationToken.IsCancellationRequested)
+                    // Create two tasks for personal and broadcast consumers.
+                    var personalTask = Task.Run(async () =>
                     {
-                        // Waiting for a message for 10 seconds, not polling
-                        LoggerHelper.Debug("Misha this is no pooling we are going to wait for 10 seconds, and that we are not going to consume CPU in an async way, and loop will continue if no message is received");
-                        IMessage msg = consumer.Receive(TimeSpan.FromSeconds(10));
-                        if (msg == null)
+                        while (!cancellationToken.IsCancellationRequested)
                         {
-                            LoggerHelper.Debug("No message received in this cycle; continuing...");
-                            continue;
+                            LoggerHelper.Debug("Waiting for personal message...");
+                            IMessage msg = personalConsumer.Receive(TimeSpan.FromSeconds(10));
+                            if (msg == null)
+                            {
+                                continue;
+                            }
+                            await ProcessMessageAsync(msg, response, session, cancellationToken);
                         }
-                        if (msg is ITextMessage textMsg)
+                    }, cancellationToken);
+                    
+                    var broadcastTask = Task.Run(async () =>
+                    {
+                        while (!cancellationToken.IsCancellationRequested)
                         {
-                            string body = textMsg.Text;
-                            LoggerHelper.Info($"Message received: {body}");
-                            string sseMessage = $"data: {body}\n\n";
-                            byte[] data = Encoding.UTF8.GetBytes(sseMessage);
-                            await response.Body.WriteAsync(data, 0, data.Length, cancellationToken);
-                            await response.Body.FlushAsync(cancellationToken);
-                            LoggerHelper.Debug("SSE message written to response stream.");
-                            session.Commit();
-                            LoggerHelper.Debug("Session committed after processing message.");
+                            LoggerHelper.Debug("Waiting for broadcast message...");
+                            IMessage msg = broadcastConsumer.Receive(TimeSpan.FromSeconds(10));
+                            if (msg == null)
+                            {
+                                continue;
+                            }
+                            await ProcessMessageAsync(msg, response, session, cancellationToken);
                         }
-                        else
-                        {
-                            session.Commit();
-                            LoggerHelper.Warn("Non-text message received; session committed without processing.");
-                        }
-                    }
+                    }, cancellationToken);
+                    
+                    await Task.WhenAll(personalTask, broadcastTask);
                 }
             }
             LoggerHelper.Info("Exiting AMQConsumerSse.StartConsumerAsync loop.");
+        }
+
+        private async Task ProcessMessageAsync(IMessage msg, HttpResponse response, ISession session, CancellationToken cancellationToken)
+        {
+            if (msg is ITextMessage textMsg)
+            {
+                string body = textMsg.Text;
+                LoggerHelper.Info($"Message received: {body}");
+                string sseMessage = $"data: {body}\n\n";
+                byte[] data = Encoding.UTF8.GetBytes(sseMessage);
+                await response.Body.WriteAsync(data, 0, data.Length, cancellationToken);
+                await response.Body.FlushAsync(cancellationToken);
+                LoggerHelper.Debug("SSE message written to response stream.");
+                session.Commit();
+                LoggerHelper.Debug("Session committed after processing message.");
+            }
+            else
+            {
+                session.Commit();
+                LoggerHelper.Warn("Non-text message received; session committed without processing.");
+            }
         }
     }
 }
