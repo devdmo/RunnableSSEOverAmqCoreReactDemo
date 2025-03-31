@@ -24,7 +24,10 @@ namespace MyProject.Services
         /// </summary>
         public void PublishMessage(string infoId, string messageText, string broadcastGroup = null)
         {
-            LoggerHelper.Debug($"PublishMessage called with infoId: {infoId}, messageText: {messageText}, broadcastGroup: {broadcastGroup ?? "none"}");
+            // Make sure broadcastGroup isn't null to avoid null reference exceptions
+            broadcastGroup = broadcastGroup ?? string.Empty;
+
+            LoggerHelper.Debug($"PublishMessage called with infoId: {infoId}, messageText: {messageText}, broadcastGroup: {(string.IsNullOrEmpty(broadcastGroup) ? "none" : broadcastGroup)}");
 
             if (string.IsNullOrEmpty(infoId))
             {
@@ -43,7 +46,7 @@ namespace MyProject.Services
                     IDestination destination;
                     if (infoId == "broadcast")
                     {
-                        LoggerHelper.Info($"Publishing broadcast message with group: {broadcastGroup ?? "none"}");
+                        LoggerHelper.Info($"Publishing broadcast message with group: {(string.IsNullOrEmpty(broadcastGroup) ? "none" : broadcastGroup)}");
                         destination = session.GetTopic("MyBroadcastTopic");
                     }
                     else

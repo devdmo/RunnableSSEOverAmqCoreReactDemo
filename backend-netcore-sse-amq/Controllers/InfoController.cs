@@ -27,7 +27,10 @@ namespace MyProject.Controllers
         [HttpGet("stream")]
         public async Task Stream([FromQuery] string id, [FromQuery] string broadcastGroup, CancellationToken cancellationToken)
         {
-            LoggerHelper.Info($"SSE stream requested for infoId: {id}, broadcastGroup: {broadcastGroup ?? "none"}");
+            // Ensure broadcast group is never null
+            broadcastGroup = broadcastGroup ?? string.Empty;
+
+            LoggerHelper.Info($"SSE stream requested for infoId: {id}, broadcastGroup: {(string.IsNullOrEmpty(broadcastGroup) ? "none" : broadcastGroup)}");
             if (string.IsNullOrEmpty(id))
             {
                 LoggerHelper.Warn("No infoId provided in query, defaulting to 'default'.");

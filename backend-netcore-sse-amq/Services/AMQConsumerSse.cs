@@ -27,7 +27,10 @@ namespace MyProject.Services
         /// </summary>
         public async Task StartConsumerAsync(string infoId, string broadcastGroup, HttpResponse response, CancellationToken cancellationToken)
         {
-            LoggerHelper.Debug($"Starting AMQConsumerSse for infoId: {infoId}, broadcastGroup: {broadcastGroup ?? "none"}");
+            // Make sure broadcastGroup isn't null to avoid null reference exceptions
+            broadcastGroup = broadcastGroup ?? string.Empty;
+
+            LoggerHelper.Debug($"Starting AMQConsumerSse for infoId: {infoId}, broadcastGroup: {(string.IsNullOrEmpty(broadcastGroup) ? "none" : broadcastGroup)}");
             var connection = _connectionManager.GetConnection();
             using (var personalSession = connection.CreateSession(AcknowledgementMode.Transactional))
             using (var broadcastSession = connection.CreateSession(AcknowledgementMode.Transactional))

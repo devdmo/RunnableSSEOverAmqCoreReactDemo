@@ -28,7 +28,7 @@ const Toolbar = () => {
       const payload = {
         id: broadcast ? "broadcast" : (toolbarId || 'default'),
         text: messageText,
-        broadcastGroup: broadcast ? broadcastGroup : null, // Include broadcastGroup only when broadcasting
+        broadcastGroup: broadcast && broadcastGroup ? broadcastGroup : "" // Send empty string instead of null
       };
       const response = await axios.post('http://localhost:5262/api/toolbar/send', payload);
       console.log("[Toolbar] Message sent successfully. Server responded:", response.data);
