@@ -25,6 +25,7 @@ namespace MyProject.Controllers
         {
             public string id { get; set; }
             public string text { get; set; }
+            public string broadcastGroup { get; set; }
         }
 
         /// <summary>
@@ -42,7 +43,7 @@ namespace MyProject.Controllers
                 return BadRequest("Message text is required.");
             }
 
-            _publisher.PublishMessage(message.id, message.text);
+            _publisher.PublishMessage(message.id, message.text, message.broadcastGroup);
             LoggerHelper.Info("Message processed and published from Toolbar.");
             return Ok("Message published successfully.");
         }

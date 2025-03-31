@@ -25,9 +25,9 @@ namespace MyProject.Services
         /// Starts a consumer for messages matching the provided infoId.
         /// Each received message is sent to the client as an SSE event.
         /// </summary>
-        public async Task StartConsumerAsync(string infoId, HttpResponse response, CancellationToken cancellationToken)
+        public async Task StartConsumerAsync(string infoId, string broadcastGroup, HttpResponse response, CancellationToken cancellationToken)
         {
-            LoggerHelper.Debug($"Starting AMQConsumerSse for infoId: {infoId}");
+            LoggerHelper.Debug($"Starting AMQConsumerSse for infoId: {infoId}, broadcastGroup: {broadcastGroup ?? "none"}");
             var connection = _connectionManager.GetConnection();
             using (var personalSession = connection.CreateSession(AcknowledgementMode.Transactional))
             using (var broadcastSession = connection.CreateSession(AcknowledgementMode.Transactional))
@@ -37,34 +37,49 @@ namespace MyProject.Services
                 string personalSelector = $"id = '{infoId}'";
                 LoggerHelper.Debug($"Using JMS selector: {personalSelector}");
                 using (var personalConsumer = personalSession.CreateConsumer(personalDestination, personalSelector))
-                // Broadcast consumer from topic (all subscribers receive these)
-                using (var broadcastConsumer = broadcastSession.CreateConsumer(broadcastSession.GetTopic("MyBroadcastTopic")))
                 {
-                    LoggerHelper.Debug("Entering AMQConsumerSse.StartConsumerAsync loop.");
-                    
-                    var personalTask = Task.Run(async () =>
+                    // Broadcast consumer from topic with selector for this broadcast group if specified
+                    IMessageConsumer broadcastConsumer;
+                    if (!string.IsNullOrEmpty(broadcastGroup))
                     {
-                        while (!cancellationToken.IsCancellationRequested)
-                        {
-                            LoggerHelper.Debug("Waiting for personal message...");
-                            IMessage msg = personalConsumer.Receive(TimeSpan.FromSeconds(10));
-                            if (msg == null) continue;
-                            await ProcessMessageAsync(msg, response, personalSession, cancellationToken);
-                        }
-                    }, cancellationToken);
-                    
-                    var broadcastTask = Task.Run(async () =>
+                        string broadcastSelector = $"broadcastGroup = '{broadcastGroup}' OR broadcastGroup IS NULL";
+                        LoggerHelper.Debug($"Using broadcast JMS selector: {broadcastSelector}");
+                        broadcastConsumer = broadcastSession.CreateConsumer(broadcastSession.GetTopic("MyBroadcastTopic"), broadcastSelector);
+                    }
+                    else
                     {
-                        while (!cancellationToken.IsCancellationRequested)
+                        LoggerHelper.Debug("No broadcast group specified, receiving all broadcast messages");
+                        broadcastConsumer = broadcastSession.CreateConsumer(broadcastSession.GetTopic("MyBroadcastTopic"));
+                    }
+
+                    using (broadcastConsumer)
+                    {
+                        LoggerHelper.Debug("Entering AMQConsumerSse.StartConsumerAsync loop.");
+                        
+                        var personalTask = Task.Run(async () =>
                         {
-                            LoggerHelper.Debug("Waiting for broadcast message...");
-                            IMessage msg = broadcastConsumer.Receive(TimeSpan.FromSeconds(10));
-                            if (msg == null) continue;
-                            await ProcessMessageAsync(msg, response, broadcastSession, cancellationToken);
-                        }
-                    }, cancellationToken);
-                    
-                    await Task.WhenAll(personalTask, broadcastTask);
+                            while (!cancellationToken.IsCancellationRequested)
+                            {
+                                LoggerHelper.Debug("Waiting for personal message...");
+                                IMessage msg = personalConsumer.Receive(TimeSpan.FromSeconds(10));
+                                if (msg == null) continue;
+                                await ProcessMessageAsync(msg, response, personalSession, cancellationToken);
+                            }
+                        }, cancellationToken);
+                        
+                        var broadcastTask = Task.Run(async () =>
+                        {
+                            while (!cancellationToken.IsCancellationRequested)
+                            {
+                                LoggerHelper.Debug("Waiting for broadcast message...");
+                                IMessage msg = broadcastConsumer.Receive(TimeSpan.FromSeconds(10));
+                                if (msg == null) continue;
+                                await ProcessMessageAsync(msg, response, broadcastSession, cancellationToken);
+                            }
+                        }, cancellationToken);
+                        
+                        await Task.WhenAll(personalTask, broadcastTask);
+                    }
                 }
             }
             LoggerHelper.Info("Exiting AMQConsumerSse.StartConsumerAsync loop.");

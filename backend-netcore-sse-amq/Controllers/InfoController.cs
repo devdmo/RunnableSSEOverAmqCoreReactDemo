@@ -22,11 +22,12 @@ namespace MyProject.Controllers
         /// <summary>
         /// SSE endpoint to stream messages for a specific infoId.
         /// The response is kept open and messages are sent in SSE format.
+        /// Optional broadcastGroup parameter can be provided to filter broadcast messages.
         /// </summary>
         [HttpGet("stream")]
-        public async Task Stream([FromQuery] string id, CancellationToken cancellationToken)
+        public async Task Stream([FromQuery] string id, [FromQuery] string broadcastGroup, CancellationToken cancellationToken)
         {
-            LoggerHelper.Info($"SSE stream requested for infoId: {id}");
+            LoggerHelper.Info($"SSE stream requested for infoId: {id}, broadcastGroup: {broadcastGroup ?? "none"}");
             if (string.IsNullOrEmpty(id))
             {
                 LoggerHelper.Warn("No infoId provided in query, defaulting to 'default'.");
@@ -38,7 +39,7 @@ namespace MyProject.Controllers
             LoggerHelper.Debug("Response header set to text/event-stream.");
 
             // Start the consumer loop to stream messages.
-            await _consumerSse.StartConsumerAsync(id, Response, cancellationToken);
+            await _consumerSse.StartConsumerAsync(id, broadcastGroup, Response, cancellationToken);
             LoggerHelper.Info("Exiting Stream endpoint.");
         }
     }

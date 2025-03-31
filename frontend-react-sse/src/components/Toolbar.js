@@ -11,11 +11,12 @@ const Toolbar = () => {
   const [toolbarId, setToolbarId] = useState('');
   const [messageText, setMessageText] = useState('');
   const [status, setStatus] = useState('');
-  const [broadcast, setBroadcast] = useState(false); // new state for broadcast
+  const [broadcast, setBroadcast] = useState(false); // broadcast flag
+  const [broadcastGroup, setBroadcastGroup] = useState(''); // new state for broadcast group
 
   const sendMessage = async (e) => {
     e.preventDefault();
-    console.log(`[Toolbar] Attempting to send message with toolbarId: ${toolbarId}, message: ${messageText}, broadcast: ${broadcast}`);
+    console.log(`[Toolbar] Attempting to send message with toolbarId: ${toolbarId}, message: ${messageText}, broadcast: ${broadcast}, broadcastGroup: ${broadcastGroup}`);
 
     if (!messageText.trim()) {
       console.warn("[Toolbar] Message text is empty.");
@@ -27,6 +28,7 @@ const Toolbar = () => {
       const payload = {
         id: broadcast ? "broadcast" : (toolbarId || 'default'),
         text: messageText,
+        broadcastGroup: broadcast ? broadcastGroup : null, // Include broadcastGroup only when broadcasting
       };
       const response = await axios.post('http://localhost:5262/api/toolbar/send', payload);
       console.log("[Toolbar] Message sent successfully. Server responded:", response.data);
@@ -50,7 +52,7 @@ const Toolbar = () => {
               setToolbarId(e.target.value);
             }}
             placeholder="Enter toolbar ID"
-            disabled={broadcast} // optionally disable when broadcasting
+            disabled={broadcast} // disable when broadcasting
           />
         </div>
         <div>
@@ -78,6 +80,20 @@ const Toolbar = () => {
             Send as broadcast
           </label>
         </div>
+        {broadcast && (
+          <div>
+            <label>Broadcast Group:</label>
+            <input
+              type="text"
+              value={broadcastGroup}
+              onChange={(e) => {
+                console.log("[Toolbar] Broadcast Group changed to:", e.target.value);
+                setBroadcastGroup(e.target.value);
+              }}
+              placeholder="Enter broadcast group"
+            />
+          </div>
+        )}
         <button type="submit">Send</button>
       </form>
       {status && <p>Status: {status}</p>}

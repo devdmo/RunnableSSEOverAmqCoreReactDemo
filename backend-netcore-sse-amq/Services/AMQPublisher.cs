@@ -22,9 +22,9 @@ namespace MyProject.Services
         /// Publishes a message with the given infoId and message text.
         /// Logs detailed information at each step.
         /// </summary>
-        public void PublishMessage(string infoId, string messageText)
+        public void PublishMessage(string infoId, string messageText, string broadcastGroup = null)
         {
-            LoggerHelper.Debug($"PublishMessage called with infoId: {infoId} and messageText: {messageText}");
+            LoggerHelper.Debug($"PublishMessage called with infoId: {infoId}, messageText: {messageText}, broadcastGroup: {broadcastGroup ?? "none"}");
 
             if (string.IsNullOrEmpty(infoId))
             {
@@ -43,7 +43,7 @@ namespace MyProject.Services
                     IDestination destination;
                     if (infoId == "broadcast")
                     {
-                        LoggerHelper.Info("Publishing broadcast message.");
+                        LoggerHelper.Info($"Publishing broadcast message with group: {broadcastGroup ?? "none"}");
                         destination = session.GetTopic("MyBroadcastTopic");
                     }
                     else
@@ -60,6 +60,14 @@ namespace MyProject.Services
                         ITextMessage message = session.CreateTextMessage(json);
                         message.Properties.SetString("id", infoId);
                         LoggerHelper.Debug($"Set JMS property 'id' to: {infoId}");
+                        
+                        // Set broadcast group as a property for topic selector if present
+                        if (infoId == "broadcast" && !string.IsNullOrEmpty(broadcastGroup))
+                        {
+                            message.Properties.SetString("broadcastGroup", broadcastGroup);
+                            LoggerHelper.Debug($"Set JMS property 'broadcastGroup' to: {broadcastGroup}");
+                        }
+                        
                         // Set expiration time for the message.
                         TimeSpan expiration = TimeSpan.FromSeconds(30);
                         producer.Send(message, MsgDeliveryMode.Persistent, MsgPriority.Normal, expiration);
