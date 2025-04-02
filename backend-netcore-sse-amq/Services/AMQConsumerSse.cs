@@ -45,7 +45,7 @@ namespace MyProject.Services
                     IMessageConsumer broadcastConsumer;
                     if (!string.IsNullOrEmpty(broadcastGroup))
                     {
-                        string broadcastSelector = $"broadcastGroup = '{broadcastGroup}' OR broadcastGroup IS NULL";
+                        string broadcastSelector = $"broadcastGroup = '{broadcastGroup}'";
                         LoggerHelper.Debug($"Using broadcast JMS selector: {broadcastSelector}");
                         broadcastConsumer = broadcastSession.CreateConsumer(broadcastSession.GetTopic("MyBroadcastTopic"), broadcastSelector);
                     }

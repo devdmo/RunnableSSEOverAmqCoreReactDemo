@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch React Frontend",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["start"],
+      "env": {
+        "BROWSER": "none"
+      },
+      "console": "integratedTerminal",
+      "localRoot": "${workspaceFolder}",
+      "useWSL": false,
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    }
+  ]
+}

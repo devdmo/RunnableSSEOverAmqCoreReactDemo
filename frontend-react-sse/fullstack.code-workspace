@@ -1,0 +1,92 @@
+{
+  "folders": [
+    {
+      "name": "Backend API",
+      "path": "../backend-netcore-sse-amq"
+    },
+    {
+      "name": "Frontend React",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.profiles.windows": {
+      "Command Prompt": {
+        "path": "cmd.exe",
+        "args": []
+      }
+    }
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": ".NET Core Launch (web)",
+        "type": "coreclr",
+        "request": "launch",
+        "preLaunchTask": "build",
+        "program": "${workspaceFolder:Backend API}/bin/Debug/net9.0/backend-netcore-sse-amq.dll",
+        "args": [],
+        "cwd": "${workspaceFolder:Backend API}",
+        "stopAtEntry": false,
+        "serverReadyAction": {
+          "action": "openExternally",
+          "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+        },
+        "env": {
+          "ASPNETCORE_ENVIRONMENT": "Development"
+        },
+        "sourceFileMap": {
+          "/Views": "${workspaceFolder:Backend API}/Views"
+        }
+      },
+      {
+        "name": "Launch React Frontend",
+        "type": "node",
+        "request": "launch",
+        "cwd": "${workspaceFolder:Frontend React}",
+        "runtimeExecutable": "npm",
+        "runtimeArgs": ["start"],
+        "env": {
+          "BROWSER": "none"
+        },
+        "console": "externalTerminal",
+        "localRoot": "${workspaceFolder:Frontend React}",
+        "useWSL": false,
+        "skipFiles": [
+          "<node_internals>/**"
+        ]
+      }
+    ],
+    "compounds": [
+      {
+        "name": "Full Stack: React + .NET Core",
+        "configurations": [".NET Core Launch (web)", "Launch React Frontend"],
+        "presentation": {
+          "hidden": false,
+          "group": "fullstack",
+          "order": 1
+        },
+        "stopAll": true
+      }
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build",
+        "command": "dotnet",
+        "type": "process",
+        "args": [
+          "build",
+          "${workspaceFolder:Backend API}/backend-netcore-sse-amq.csproj",
+          "/property:GenerateFullPaths=true",
+          "/consoleloggerparameters:NoSummary"
+        ],
+        "problemMatcher": "$msCompile"
+      }
+    ]
+  }
+}
