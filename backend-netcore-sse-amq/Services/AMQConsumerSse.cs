@@ -1,5 +1,6 @@
 using Apache.NMS;
 using System;
+using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -24,16 +25,19 @@ namespace MyProject.Services
         /// <summary>
         /// Starts a consumer for messages matching the provided infoId.
         /// Each received message is sent to the client as an SSE event.
+        /// Can listen to up to two broadcast groups simultaneously.
         /// </summary>
-        public async Task StartConsumerAsync(string infoId, string broadcastGroup, HttpResponse response, CancellationToken cancellationToken)
+        public async Task StartConsumerAsync(string infoId, string broadcastGroup, string broadcastGroup2, HttpResponse response, CancellationToken cancellationToken)
         {
-            // Make sure broadcastGroup isn't null to avoid null reference exceptions
+            // Make sure broadcastGroups aren't null to avoid null reference exceptions
             broadcastGroup = broadcastGroup ?? string.Empty;
+            broadcastGroup2 = broadcastGroup2 ?? string.Empty;
 
-            LoggerHelper.Debug($"Starting AMQConsumerSse for infoId: {infoId}, broadcastGroup: {(string.IsNullOrEmpty(broadcastGroup) ? "none" : broadcastGroup)}");
+            LoggerHelper.Debug($"Starting AMQConsumerSse for infoId: {infoId}, broadcastGroup: {(string.IsNullOrEmpty(broadcastGroup) ? "none" : broadcastGroup)}, broadcastGroup2: {(string.IsNullOrEmpty(broadcastGroup2) ? "none" : broadcastGroup2)}");
             var connection = _connectionManager.GetConnection();
             using (var personalSession = connection.CreateSession(AcknowledgementMode.Transactional))
             using (var broadcastSession = connection.CreateSession(AcknowledgementMode.Transactional))
+            using (var broadcastSession2 = connection.CreateSession(AcknowledgementMode.Transactional))
             {
                 // Personal messages consumer from queue with selector for this infoId
                 IDestination personalDestination = personalSession.GetQueue(queueName);
@@ -41,8 +45,8 @@ namespace MyProject.Services
                 LoggerHelper.Debug($"Using JMS selector: {personalSelector}");
                 using (var personalConsumer = personalSession.CreateConsumer(personalDestination, personalSelector))
                 {
-                    // Broadcast consumer from topic with selector for this broadcast group if specified
-                    IMessageConsumer broadcastConsumer;
+                    // First broadcast consumer from topic with selector for first broadcast group if specified
+                    IMessageConsumer? broadcastConsumer = null;
                     if (!string.IsNullOrEmpty(broadcastGroup))
                     {
                         string broadcastSelector = $"broadcastGroup = '{broadcastGroup}'";
@@ -51,11 +55,21 @@ namespace MyProject.Services
                     }
                     else
                     {
-                        LoggerHelper.Debug("No broadcast group specified, receiving all broadcast messages");
+                        LoggerHelper.Debug("No first broadcast group specified, receiving all broadcast messages");
                         broadcastConsumer = broadcastSession.CreateConsumer(broadcastSession.GetTopic("MyBroadcastTopic"));
                     }
 
+                    // Second broadcast consumer from topic with selector for second broadcast group if specified
+                    IMessageConsumer? broadcastConsumer2 = null;
+                    if (!string.IsNullOrEmpty(broadcastGroup2))
+                    {
+                        string broadcastSelector2 = $"broadcastGroup = '{broadcastGroup2}'";
+                        LoggerHelper.Debug($"Using second broadcast JMS selector: {broadcastSelector2}");
+                        broadcastConsumer2 = broadcastSession2.CreateConsumer(broadcastSession2.GetTopic("MyBroadcastTopic"), broadcastSelector2);
+                    }
+
                     using (broadcastConsumer)
+                    using (broadcastConsumer2)
                     {
                         LoggerHelper.Debug("Entering AMQConsumerSse.StartConsumerAsync loop.");
                         
@@ -77,14 +91,38 @@ namespace MyProject.Services
                         {
                             while (!cancellationToken.IsCancellationRequested)
                             {
-                                LoggerHelper.Debug("Waiting for broadcast message...");
+                                LoggerHelper.Debug("Waiting for first broadcast message...");
                                 IMessage msg = broadcastConsumer.Receive(TimeSpan.FromSeconds(10));
                                 if (msg == null) continue;
+                                LoggerHelper.Info($"First broadcast message received: {msg}");
                                 await ProcessMessageAsync(msg, response, broadcastSession, cancellationToken);
                             }
                         }, cancellationToken);
                         
-                        await Task.WhenAll(personalTask, broadcastTask);
+                        Task? broadcastTask2 = null;
+                        if (broadcastConsumer2 != null)
+                        {
+                            broadcastTask2 = Task.Run(async () =>
+                            {
+                                while (!cancellationToken.IsCancellationRequested)
+                                {
+                                    LoggerHelper.Debug("Waiting for second broadcast message...");
+                                    IMessage msg = broadcastConsumer2.Receive(TimeSpan.FromSeconds(10));
+                                    if (msg == null) continue;
+                                    LoggerHelper.Info($"Second broadcast message received: {msg}");
+                                    await ProcessMessageAsync(msg, response, broadcastSession2, cancellationToken);
+                                }
+                            }, cancellationToken);
+                        }
+                        
+                        // Wait for all active tasks
+                        var tasks = new List<Task> { personalTask, broadcastTask };
+                        if (broadcastTask2 != null)
+                        {
+                            tasks.Add(broadcastTask2);
+                        }
+                        
+                        await Task.WhenAll(tasks);
                     }
                 }
             }

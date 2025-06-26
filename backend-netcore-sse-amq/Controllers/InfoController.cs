@@ -22,15 +22,16 @@ namespace MyProject.Controllers
         /// <summary>
         /// SSE endpoint to stream messages for a specific infoId.
         /// The response is kept open and messages are sent in SSE format.
-        /// Optional broadcastGroup parameter can be provided to filter broadcast messages.
+        /// Optional broadcastGroup and broadcastGroup2 parameters can be provided to filter broadcast messages.
         /// </summary>
         [HttpGet("stream")]
-        public async Task Stream([FromQuery] string id, [FromQuery] string ?broadcastGroup, CancellationToken cancellationToken)
+        public async Task Stream([FromQuery] string id, [FromQuery] string ?broadcastGroup, [FromQuery] string ?broadcastGroup2, CancellationToken cancellationToken)
         {
-            // Ensure broadcast group is never null
+            // Ensure broadcast groups are never null
             broadcastGroup = broadcastGroup ?? string.Empty;
+            broadcastGroup2 = broadcastGroup2 ?? string.Empty;
 
-            LoggerHelper.Info($"SSE stream requested for infoId: {id}, broadcastGroup: {(string.IsNullOrEmpty(broadcastGroup) ? "none" : broadcastGroup)}");
+            LoggerHelper.Info($"SSE stream requested for infoId: {id}, broadcastGroup: {(string.IsNullOrEmpty(broadcastGroup) ? "none" : broadcastGroup)}, broadcastGroup2: {(string.IsNullOrEmpty(broadcastGroup2) ? "none" : broadcastGroup2)}");
             if (string.IsNullOrEmpty(id))
             {
                 LoggerHelper.Warn("No infoId provided in query, defaulting to 'default'.");
@@ -38,11 +39,11 @@ namespace MyProject.Controllers
             }
 
             // Set the response header to use SSE content type.
-            Response.Headers.Add("Content-Type", "text/event-stream");
+            Response.Headers["Content-Type"] = "text/event-stream";
             LoggerHelper.Debug("Response header set to text/event-stream.");
 
             // Start the consumer loop to stream messages.
-            await _consumerSse.StartConsumerAsync(id, broadcastGroup, Response, cancellationToken);
+            await _consumerSse.StartConsumerAsync(id, broadcastGroup, broadcastGroup2, Response, cancellationToken);
             LoggerHelper.Info("Exiting Stream endpoint.");
         }
     }

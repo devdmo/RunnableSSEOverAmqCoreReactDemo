@@ -17,6 +17,7 @@ const InfoPage = () => {
   const [messages, setMessages] = useState([]);
   const [infoId, setInfoId] = useState('');
   const [broadcastGroup, setBroadcastGroup] = useState('');
+  const [broadcastGroup2, setBroadcastGroup2] = useState('');
   const [isConnected, setIsConnected] = useState(false);
 
   useEffect(() => {
@@ -29,13 +30,16 @@ const InfoPage = () => {
     let eventSource;
 
     const connectToSSE = () => {
-      // Build the URL with both infoId and optional broadcastGroup
+      // Build the URL with infoId and optional broadcast groups
       let url = `http://localhost:5262/api/info/stream?id=${infoId}`;
       if (broadcastGroup && broadcastGroup.trim() !== '') {
         url += `&broadcastGroup=${encodeURIComponent(broadcastGroup)}`;
       }
+      if (broadcastGroup2 && broadcastGroup2.trim() !== '') {
+        url += `&broadcastGroup2=${encodeURIComponent(broadcastGroup2)}`;
+      }
 
-      console.log(`[InfoPage] Starting SSE connection for Info ID: ${infoId}, Broadcast Group: ${broadcastGroup || 'none'}`);
+      console.log(`[InfoPage] Starting SSE connection for Info ID: ${infoId}, Broadcast Group: ${broadcastGroup || 'none'}, Broadcast Group 2: ${broadcastGroup2 || 'none'}`);
       eventSource = new EventSource(url);
 
       eventSource.onopen = () => {
@@ -71,17 +75,19 @@ const InfoPage = () => {
         eventSource.close();
       }
     };
-  }, [infoId, broadcastGroup]);
+  }, [infoId, broadcastGroup, broadcastGroup2]);
 
   const handleIdSubmit = (e) => {
     e.preventDefault();
     const id = e.target.elements.infoId.value.trim();
     const group = e.target.elements.broadcastGroup.value.trim();
+    const group2 = e.target.elements.broadcastGroup2.value.trim();
 
     if (id) {
-      console.log(`[InfoPage] Info ID set to: ${id}, Broadcast Group: ${group || 'none'}`);
+      console.log(`[InfoPage] Info ID set to: ${id}, Broadcast Group: ${group || 'none'}, Broadcast Group 2: ${group2 || 'none'}`);
       setInfoId(id);
       setBroadcastGroup(group);
+      setBroadcastGroup2(group2);
     } else {
       console.warn("[InfoPage] Empty Info ID entered.");
     }
@@ -103,12 +109,19 @@ const InfoPage = () => {
               <input type="text" name="broadcastGroup" />
             </label>
           </div>
+          <div>
+            <label>
+              Broadcast Group 2 (optional):
+              <input type="text" name="broadcastGroup2" />
+            </label>
+          </div>
           <button type="submit">Connect</button>
         </form>
       ) : (
         <div>
           <h2>Messages for Info ID: {infoId}</h2>
           {broadcastGroup && <h3>Broadcast Group: {broadcastGroup}</h3>}
+          {broadcastGroup2 && <h3>Broadcast Group 2: {broadcastGroup2}</h3>}
           {isConnected ? (
             <p>SSE connection active.</p>
           ) : (
