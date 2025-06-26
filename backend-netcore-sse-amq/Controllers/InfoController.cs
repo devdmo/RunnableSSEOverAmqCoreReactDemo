@@ -25,7 +25,7 @@ namespace MyProject.Controllers
         /// Optional broadcastGroup parameter can be provided to filter broadcast messages.
         /// </summary>
         [HttpGet("stream")]
-        public async Task Stream([FromQuery] string id, [FromQuery] string broadcastGroup, CancellationToken cancellationToken)
+        public async Task Stream([FromQuery] string id, [FromQuery] string ?broadcastGroup, CancellationToken cancellationToken)
         {
             // Ensure broadcast group is never null
             broadcastGroup = broadcastGroup ?? string.Empty;
