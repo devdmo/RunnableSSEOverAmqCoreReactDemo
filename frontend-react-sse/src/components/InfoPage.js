@@ -31,8 +31,8 @@ const InfoPage = () => {
     const connectToSSE = () => {
       // Build the URL with both infoId and optional broadcastGroup
       let url = `http://localhost:5262/api/info/stream?id=${infoId}`;
-      if (broadcastGroup) {
-        url += `&broadcastGroup=${broadcastGroup}`;
+      if (broadcastGroup && broadcastGroup.trim() !== '') {
+        url += `&broadcastGroup=${encodeURIComponent(broadcastGroup)}`;
       }
 
       console.log(`[InfoPage] Starting SSE connection for Info ID: ${infoId}, Broadcast Group: ${broadcastGroup || 'none'}`);

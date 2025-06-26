@@ -63,9 +63,12 @@ namespace MyProject.Services
                         {
                             while (!cancellationToken.IsCancellationRequested)
                             {
-                                LoggerHelper.Debug("Waiting for personal message...");
+                                // add to the log with what selector and broadcast we are using
+                                LoggerHelper.Debug($"Waiting for personal message... Using personal selector: {personalSelector}");                                
                                 IMessage msg = personalConsumer.Receive(TimeSpan.FromSeconds(10));
                                 if (msg == null) continue;
+                                // add a log when the message are received and print the message 
+                                LoggerHelper.Info($"Personal message received: {msg}");
                                 await ProcessMessageAsync(msg, response, personalSession, cancellationToken);
                             }
                         }, cancellationToken);
