@@ -2,21 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch React Frontend",
-      "type": "node",
+      "type": "pwa-chrome",
       "request": "launch",
-      "cwd": "${workspaceFolder}",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["start"],
-      "env": {
-        "BROWSER": "none"
-      },
-      "console": "integratedTerminal",
-      "localRoot": "${workspaceFolder}",
-      "useWSL": false,
-      "skipFiles": [
-        "<node_internals>/**"
-      ]
+      "name": "React Front End",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/src",
+      "preLaunchTask": "npm: start",
+      "internalConsoleOptions": "neverOpen"
     }
   ]
 }
