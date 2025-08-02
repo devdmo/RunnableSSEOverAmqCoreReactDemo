@@ -12,10 +12,12 @@ namespace MyProject.Controllers
     public class ToolbarController : ControllerBase
     {
         private readonly AMQPublisher _publisher;
+        private readonly ConnectionStatisticsManager _statsManager;
 
         public ToolbarController(AMQPublisher publisher)
         {
             _publisher = publisher;
+            _statsManager = ConnectionStatisticsManager.Instance;
         }
 
         /// <summary>
@@ -36,32 +38,46 @@ namespace MyProject.Controllers
         [HttpPost("send")]
         public IActionResult SendMessage([FromBody] ToolbarMessageDto message)
         {
-            LoggerHelper.Debug("Received SendMessage request from Toolbar.");
-
-            if (message == null || string.IsNullOrWhiteSpace(message.text))
-            {
-                LoggerHelper.Warn("Message text is null or empty.");
-                return BadRequest("Message text is required.");
-            }
-
-            // Handle null properties
-            string messageId = message.id ?? "default";
-            string messageText = message.text;
-            string broadcastGroup = message.broadcastGroup ?? string.Empty;
-            string broadcastGroup2 = message.broadcastGroup2 ?? string.Empty;
-
-            // Publish message with first broadcast group
-            _publisher.PublishMessage(messageId, messageText, broadcastGroup);
+            var clientHost = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown";
             
-            // If there's a second broadcast group, publish the message there too
-            if (!string.IsNullOrEmpty(broadcastGroup2) && messageId == "broadcast")
+            try
             {
-                LoggerHelper.Info($"Publishing message to second broadcast group: {broadcastGroup2}");
-                _publisher.PublishMessage(messageId, messageText, broadcastGroup2);
+                LoggerHelper.Debug($"[TOOLBAR] Received SendMessage request from {clientHost}.");
+
+                if (message == null || string.IsNullOrWhiteSpace(message.text))
+                {
+                    LoggerHelper.Warn($"[TOOLBAR] Message text is null or empty from {clientHost}.");
+                    _statsManager.RecordError(clientHost, string.Empty, "INVALID_MESSAGE", "Message text is required");
+                    return BadRequest("Message text is required.");
+                }
+
+                // Handle null properties
+                string messageId = message.id ?? "default";
+                string messageText = message.text;
+                string broadcastGroup = message.broadcastGroup ?? string.Empty;
+                string broadcastGroup2 = message.broadcastGroup2 ?? string.Empty;
+
+                LoggerHelper.Info($"[TOOLBAR] Publishing message from {clientHost} - ID: {messageId}, BG1: {broadcastGroup}, BG2: {broadcastGroup2}");
+
+                // Publish message with first broadcast group
+                _publisher.PublishMessage(messageId, messageText, broadcastGroup);
+                
+                // If there's a second broadcast group, publish the message there too
+                if (!string.IsNullOrEmpty(broadcastGroup2) && messageId == "broadcast")
+                {
+                    LoggerHelper.Info($"[TOOLBAR] Publishing message to second broadcast group: {broadcastGroup2}");
+                    _publisher.PublishMessage(messageId, messageText, broadcastGroup2);
+                }
+                
+                LoggerHelper.Info($"[TOOLBAR] Message processed and published from {clientHost}.");
+                return Ok("Message published successfully.");
             }
-            
-            LoggerHelper.Info("Message processed and published from Toolbar.");
-            return Ok("Message published successfully.");
+            catch (Exception ex)
+            {
+                LoggerHelper.Error($"[TOOLBAR] Error processing message from {clientHost}", ex);
+                _statsManager.RecordError(clientHost, string.Empty, "TOOLBAR_PUBLISH_ERROR", ex.Message, ex);
+                return StatusCode(500, new { error = "Failed to publish message", message = ex.Message });
+            }
         }
     }
 }
