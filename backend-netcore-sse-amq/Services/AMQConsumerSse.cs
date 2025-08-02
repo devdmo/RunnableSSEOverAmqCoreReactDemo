@@ -154,6 +154,7 @@ namespace MyProject.Services
                         await Task.WhenAll(tasks);
                     }
                 }
+                }
             }
             catch (Exception ex)
             {

@@ -215,7 +215,7 @@ namespace MyProject.Services
         public DateTime OpenedAt { get; set; }
         public DateTime? ClosedAt { get; set; }
         public DateTime LastActivity { get; set; }
-        public long MessageCount { get; set; }
+        public long MessageCount;
         public int ErrorCount { get; set; }
         public string? LastError { get; set; }
         public DateTime? LastErrorAt { get; set; }
