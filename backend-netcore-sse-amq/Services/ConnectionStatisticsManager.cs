@@ -21,6 +21,10 @@ namespace MyProject.Services
         private readonly ConcurrentQueue<ConnectionEvent> _connectionEvents = new();
         private readonly ConcurrentQueue<ErrorEvent> _errorEvents = new();
         
+        // Rate limiting tracking (conexiones por IP en los últimos 60 segundos)
+        private readonly ConcurrentDictionary<string, Queue<DateTime>> _connectionAttempts = new();
+        private readonly object _rateLimitLock = new object();
+        
         // Counters
         private long _totalConnectionsOpened = 0;
         private long _totalConnectionsClosed = 0;

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Linq;
 using MyProject.Services;
 
 namespace MyProject.Controllers
@@ -34,11 +35,39 @@ namespace MyProject.Controllers
             
             try
             {
+                // 🚨 CHECKPOINT 1: Verificar límites de conexión total
+                var currentStats = _statsManager.GetStatistics();
+                const int MAX_TOTAL_CONNECTIONS = 500;
+                
+                if (currentStats.TotalActiveConnections >= MAX_TOTAL_CONNECTIONS)
+                {
+                    LoggerHelper.Warn($"[SSE-DENY] Total connection limit reached: {currentStats.TotalActiveConnections}/{MAX_TOTAL_CONNECTIONS}. Denying connection from {clientHost}");
+                    _statsManager.RecordError(clientHost, string.Empty, "CONNECTION_LIMIT_EXCEEDED", $"Total connections: {currentStats.TotalActiveConnections}");
+                    
+                    Response.StatusCode = 503;
+                    await Response.WriteAsync("Service temporarily unavailable - connection limit exceeded");
+                    return;
+                }
+
+                // 🚨 CHECKPOINT 2: Verificar límites por IP
+                var hostConnections = currentStats.HostStatistics.FirstOrDefault(h => h.Host == clientHost);
+                const int MAX_CONNECTIONS_PER_IP = 20;
+                
+                if (hostConnections != null && hostConnections.ActiveConnections >= MAX_CONNECTIONS_PER_IP)
+                {
+                    LoggerHelper.Warn($"[SSE-DENY] IP connection limit reached for {clientHost}: {hostConnections.ActiveConnections}/{MAX_CONNECTIONS_PER_IP}");
+                    _statsManager.RecordError(clientHost, string.Empty, "IP_CONNECTION_LIMIT_EXCEEDED", $"IP connections: {hostConnections.ActiveConnections}");
+                    
+                    Response.StatusCode = 429;
+                    await Response.WriteAsync("Too many connections from your IP address");
+                    return;
+                }
+
                 // Ensure broadcast groups are never null
                 broadcastGroup = broadcastGroup ?? string.Empty;
                 broadcastGroup2 = broadcastGroup2 ?? string.Empty;
 
-                LoggerHelper.Info($"[SSE] Stream requested from {clientHost} - infoId: {id}, broadcastGroup: {(string.IsNullOrEmpty(broadcastGroup) ? "none" : broadcastGroup)}, broadcastGroup2: {(string.IsNullOrEmpty(broadcastGroup2) ? "none" : broadcastGroup2)}");
+                LoggerHelper.Info($"[SSE-ACCEPT] Stream requested from {clientHost} - infoId: {id}, broadcastGroup: {(string.IsNullOrEmpty(broadcastGroup) ? "none" : broadcastGroup)}, broadcastGroup2: {(string.IsNullOrEmpty(broadcastGroup2) ? "none" : broadcastGroup2)}. Active: {currentStats.TotalActiveConnections}/{MAX_TOTAL_CONNECTIONS}");
                 
                 if (string.IsNullOrEmpty(id))
                 {
@@ -57,8 +86,43 @@ namespace MyProject.Controllers
                 
                 LoggerHelper.Debug($"[SSE] Response headers set for connection {connectionId}");
 
-                // Start the consumer loop to stream messages.
-                await _consumerSse.StartConsumerAsync(id, broadcastGroup, broadcastGroup2, Response, cancellationToken, connectionId);
+                // ✅ CRITICAL: Ensure response stream is properly managed
+                try
+                {
+                    // Create a combined cancellation token with timeout
+                    using var timeoutCts = new CancellationTokenSource(TimeSpan.FromMinutes(30)); // 30-minute SSE timeout
+                    using var combinedCts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken, timeoutCts.Token);
+                    
+                    // Start the consumer loop to stream messages.
+                    await _consumerSse.StartConsumerAsync(id, broadcastGroup, broadcastGroup2, Response, combinedCts.Token, connectionId);
+                }
+                catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
+                {
+                    LoggerHelper.Info($"[SSE] Connection {connectionId} cancelled by client");
+                    throw; // Re-throw client cancellation
+                }
+                catch (OperationCanceledException)
+                {
+                    LoggerHelper.Info($"[SSE] Connection {connectionId} timed out after 30 minutes");
+                    _statsManager.CloseConnection(connectionId, "SSE_TIMEOUT_30MIN");
+                    // Don't re-throw timeout cancellation, handle it gracefully
+                }
+                finally
+                {
+                    // Ensure response stream is properly closed
+                    try
+                    {
+                        if (Response.Body.CanWrite)
+                        {
+                            await Response.Body.FlushAsync(cancellationToken);
+                        }
+                        LoggerHelper.Debug($"[SSE] Response stream flushed for connection {connectionId}");
+                    }
+                    catch (Exception flushEx)
+                    {
+                        LoggerHelper.Warn($"[SSE] Error flushing response stream for connection {connectionId}: {flushEx.Message}");
+                    }
+                }
                 
                 LoggerHelper.Info($"[SSE] Connection {connectionId} from {clientHost} completed normally");
             }
